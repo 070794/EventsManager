@@ -1,0 +1,88 @@
+<html ng-app="EventsManager" >
+<head>
+
+<title>Events Manager</title>
+<link type="text/css" rel=stylesheet href=style.css />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script  type="text/javascript" src="app.js"> </script>
+
+</head>
+<body ng-controller="EventController as EC">
+
+
+
+    <!-- the upper div which contain title,city and login buttons -->
+	<div class="topbar">
+
+		<div class="up">
+	    	<div class="city"> <b>Bangalore </b></div>
+
+	    	<div class="addons">
+
+	    		<button id="login" type="button">LOGIN</button>
+	   			<button id="create" type="button"> + Create</button> 
+	   		</div>
+		</div>
+
+
+		<div class="Title">
+	 	<b> UPCOMING EVENTS </b>
+		</div>
+
+
+	</div>
+
+	 <!-- in this div the types of events filer is added -->
+	<div class="filter">
+
+		<div class="eventtype">
+	     	<button id="art" type="button">Arts & Culture</button>
+	     	<button id="health" type="button">Health</button>
+	     	<button id="sports" type="button">Sports</button>
+	     	<button id="adventure" type="button">Anventure</button>
+	     	<button id="party" type="button">Parties & NightLife</button>
+	     </div>
+
+    	<div class="date">
+    	<button id="today" type="button">Today</button>
+    	<button id="tomorrow" type="button">Tommorow</button>
+    	<button id="weekend" type="button">This Weekend</button>
+    	<button id="month" type="button">This Month</button>
+    	</div>
+
+	</div>
+
+
+   <div ng-repeat="event in EC.products">
+
+   		<div class="thumb">
+	
+			<div class="thumb-image">
+
+			    <img src="https://onepagelove.com/wp-content/uploads/2015/03/opl-small13.jpg" alt="opl-small" width="200" height="200" class="alignnone size-full wp-image-26003">
+
+			</div>
+
+			<div class="thumb-info">
+
+				<div class="thumb-title">
+
+			        <div class="thumb-name">
+						<h2>
+							 {{event.name}}	
+						</h2>					
+					</div>
+
+				</div>
+
+			</div>
+   		
+   		</div>
+	</div>
+
+
+
+
+</body>
+</html>
