@@ -2,7 +2,7 @@
   "name": "event-manager",
   "version": "0.0.1",
   "description": "shows the list of upcoming events",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
   },
   "repository": {
