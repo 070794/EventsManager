@@ -1,8 +1,12 @@
 module.exports = {
-    "extends": "standard",
-    "installedESLint": true,
-    "plugins": [
-        "standard",
-        "promise"
-    ]
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "angular"],
+    "rules": {
+        "no-console":0,
+        "angular/log":0
+    }
 };
