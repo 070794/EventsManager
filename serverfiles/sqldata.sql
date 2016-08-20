@@ -60,7 +60,7 @@ SET thumb='ve1_0.jpg'
 WHERE event_id=3;
 
 UPDATE events
-SET thumb='pn1_0.jpg'
+SET type='party'
 WHERE event_id=4;
 
 UPDATE events

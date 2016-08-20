@@ -55,6 +55,31 @@ app.get("/images",function (req,res){
 
 });
 
+
+
+app.get("/type",function (req,res){
+
+       //console.log("SELECT * from events where type = "+ req.query.type);
+     
+      connection.query("SELECT * from events where type = '"+ req.query.type+"'" ,function (err,results){
+
+        res.send(results);
+    });
+
+});
+
+app.get("/date",function (req,res){
+     
+       connection.query("SELECT * from events where dt >= '"+ req.query.date1+"' and dt <= '"+ req.query.date2+"'" ,function (err,results){
+        console.log("SELECT * from events where dt >= '"+ req.query.date1+"' and dt <= '"+ req.query.date2+"'");
+        res.send(results);
+
+    });
+
+});
+
+
+
 app.use(express.static('src'));
 
 app.get('/', function (req, res) {

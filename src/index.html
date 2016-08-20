@@ -37,18 +37,18 @@
 	<div class="filter">
 
 		<div class="eventtype">
-	     	<button id="art" type="button">Arts & Culture </button>
-	     	<button id="health" type="button">Health</button>
-	     	<button id="sports" type="button">Sports</button>
-	     	<button id="adventure" type="button">Adventure</button>
-	     	<button id="party" type="button">Parties & NightLife</button>
+	     	<button ng-click="typeclick($event)" id="art" type="button">Arts & Culture </button>
+	     	<button ng-click="typeclick($event)" id="health" type="button">Health</button>
+	     	<button ng-click="typeclick($event)" id="sports" type="button">Sports</button>
+	     	<button ng-click="typeclick($event)" id="adventure" type="button">Adventure</button>
+	     	<button ng-click="typeclick($event)" id="party" type="button">Parties & NightLife</button>
 	     </div>
 
     	<div class="date">
-    	<button id="today" type="button">Today</button>
-    	<button id="tomorrow" type="button">Tommorow</button>
-    	<button id="weekend" type="button">This Weekend</button>
-    	<button id="month" type="button">This Month</button>
+    	<button ng-click="dateclick($event)" id="today" type="button">Today</button>
+    	<button ng-click="dateclick($event)" id="tomorrow" type="button">Tommorow</button>
+    	<button ng-click="dateclick($event)" id="week" type="button">This Week</button>
+    	<button ng-click="dateclick($event)" id="month" type="button">This Month</button>
     	</div>
 
 	</div>
