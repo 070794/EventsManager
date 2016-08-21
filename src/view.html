@@ -1,0 +1,34 @@
+
+<div  ng-repeat="event in products" id={{event.event_id}} ng-click="go('events',event.event_id)">
+
+   		<div class="thumb">
+	
+			<div class="thumb-image">
+
+			    <img ng-src="images/{{event.thumb}}" width="200" height="200">
+
+			</div>
+
+			<div class="thumb-info">
+
+				<div class="thumb-title">
+
+			        <div class="thumb-name">
+						<h2>
+							 {{event.title}}	
+						</h2>					
+					</div>
+
+				</div>
+
+			</div>
+   		
+   		</div>
+</div>
+
+
+
+
+
+
+

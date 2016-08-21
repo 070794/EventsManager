@@ -51,6 +51,25 @@ Insert into images values(5,"s1_1.jpeg");
 Insert into images values(5,"s1_2.jpeg");
 
 
+Insert into events(title,dt,venue,type,author,price,des,thumb) 
+Values ('Marathon','2016-09-04 14:00:00','DECATHLON','Sports','DECATHLON SPORTS INDIA',100,
+"Our runs start on time so be punctual and arrive early.Registration is not transferable and not refundable.
+Train well to run safe and run well.Registration packs need to be collected on Sat the 3rd of Sept at the race pack pick up at decathlon - Chikkajala near the airport - NO BIB - NO RUN - NO MEDAL - NO CERTIFICATE.
+Come in 30 mins before the start of your race to ensure you warm up, meet some friends and have a great start.
+Get as many of your family and friends to join us all at the looping course so that they can cheer you on at several points and get you to your personal best time and make it your funnest race as you see their placards, they photograph you and cheer loudly for you. Maybe some of them can hand out medals and certs at the finish line","s2_3.jpg");
+
+
+
+Insert into images values(6,"s2_0.jpg");
+Insert into images values(6,"s2_1.jpeg");
+Insert into images values(6,"s2_2.jpeg");
+Insert into images values(6,"s2_3.jpeg");
+
+
+
+
+
+
 
 ALTER TABLE events
 ADD thumb VARCHAR(100);

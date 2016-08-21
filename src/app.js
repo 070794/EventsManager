@@ -2,11 +2,24 @@
 var app1=angular.module("EventsManager",['ngRoute']);
 
 
+app1.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
 
-app1.controller("EventController", function($scope,$http,resultsFactory,typeFactory,dateFactory){
+	$routeProvider.
+	when('/allevents',{
+		templateUrl: 'view.html'})
+	.when('/events/:event_id',{
+		templateUrl: 'event.html'});
+
+}]);
+
+
+app1.controller("EventController", function($scope,$location,$http,resultsFactory,typeFactory,dateFactory){
 	$scope.products=events;
 	//$scope.images=events;
-	
+	$scope.go = function (path ,eventid) {
+		console.log(eventid);
+    $location.path( path + "/:"+eventid);
+    };
   	resultsFactory.all().then(
     function(res){
       $scope.products = res;
@@ -257,5 +270,4 @@ var events=[];
 	
 
 })();
-
 

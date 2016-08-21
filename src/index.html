@@ -2,15 +2,15 @@
 <head>
 
 <title>Events Manager</title>
+<base href="/">
 <link type="text/css" rel=stylesheet href=style.css />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script> -->
 <script  type="text/javascript" src="app.js"> </script>
 
 </head>
 <body ng-controller="EventController as EC">
-
-
 
     <!-- the upper div which contain title,city and login buttons -->
 	<div class="topbar">
@@ -39,7 +39,7 @@
 		<div class="eventtype">
 	     	<button ng-click="typeclick($event)" id="art" type="button">Arts & Culture </button>
 	     	<button ng-click="typeclick($event)" id="health" type="button">Health</button>
-	     	<button ng-click="typeclick($event)" id="sports" type="button">Sports</button>
+	     	<button ng-click="typeclick($event)" id="sports" type="button">Sports & Fitness</button>
 	     	<button ng-click="typeclick($event)" id="adventure" type="button">Adventure</button>
 	     	<button ng-click="typeclick($event)" id="party" type="button">Parties & NightLife</button>
 	     </div>
@@ -52,35 +52,10 @@
     	</div>
 
 	</div>
-
-
-   <div ng-repeat="event in products">
-
-   		<div class="thumb">
-	
-			<div class="thumb-image">
-
-			    <img ng-src="images/{{event.thumb}}" width="200" height="200">
-
-			</div>
-
-			<div class="thumb-info">
-
-				<div class="thumb-title">
-
-			        <div class="thumb-name">
-						<h2>
-							 {{event.title}}	
-						</h2>					
-					</div>
-
-				</div>
-
-			</div>
-   		
-   		</div>
-	</div>
-
+    
+    <a href="#allevents">ejgfjegrjhdfvjbdhj</a>
+   <div ng-view>
+   </div>
 
 
 

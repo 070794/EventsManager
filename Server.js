@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var mysql= require('mysql');
 
-
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'eventuser',
@@ -33,7 +32,6 @@ connection.connect(function(err) {
   // };
 
 
-
 app.get("/events",function (req,res){
 
       connection.query('SELECT * from events',function (err,results){
@@ -44,7 +42,6 @@ app.get("/events",function (req,res){
 
 });
 
-
 app.get("/images",function (req,res){
 
       connection.query('SELECT * from images',function (err,results){
@@ -54,8 +51,6 @@ app.get("/images",function (req,res){
     });
 
 });
-
-
 
 app.get("/type",function (req,res){
 
@@ -77,7 +72,6 @@ app.get("/date",function (req,res){
     });
 
 });
-
 
 
 app.use(express.static('src'));
