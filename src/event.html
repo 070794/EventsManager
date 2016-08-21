@@ -1,9 +1,14 @@
-<div class="main">
+<div style= "color:white" class="main">
 	<div class="nameImage" >
-		<div class="eventname"></div>
-		<div class="eventimages" ng-repeat="image in images">
-		{{event.image}}
-		</div>
+		<div  class="eventname">kjkhk</div>
+
+		<div class="eventimages" ng-controller="ImageController"  ng-show="image.length">
+          <div class="img-wrap">
+           {{current}}
+          {{image[current].image_path}}
+            <img ng-src="images/{{image[current].image_path}}" />
+          </div>
+        </div>
 
 	
 	</div>
