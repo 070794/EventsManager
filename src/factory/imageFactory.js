@@ -20,6 +20,7 @@ app1.factory('imageFactory', function($http, $q) {
 
      }, function errorCallback(response) {
        console.log("failure");
+       console.log(response);
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });

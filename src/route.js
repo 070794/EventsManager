@@ -1,4 +1,4 @@
-app1.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
+app1.config(['$routeProvider','$locationProvider',function($routeProvider){
 
 	$routeProvider.
 	when('/',{

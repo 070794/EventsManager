@@ -18,7 +18,7 @@ app1.factory('dateFactory', function($http, $q) {
 	else if (eventid=='tomorrow')
 	{
 		var tomorrow= new Date();
-	    tomorrow.setDate(tomorrow.getDate() + 1);
+		tomorrow.setDate(tomorrow.getDate() + 1);
 
 		start=tomorrow.toISOString().slice(0, 10).replace('T', ' ')+" 00:00:00";
 		end= tomorrow.toISOString().slice(0, 10).replace('T', ' ')+" 23:59:59";
@@ -29,8 +29,8 @@ app1.factory('dateFactory', function($http, $q) {
 	{ 
 		start=new Date().toISOString().slice(0, 10).replace('T', ' ')+" 00:00:00";
 		var week= new Date();
-	    week.setDate(week.getDate() + 7);
-	    end=week.toISOString().slice(0, 10).replace('T', ' ')+" 23:59:59";
+		week.setDate(week.getDate() + 7);
+		end=week.toISOString().slice(0, 10).replace('T', ' ')+" 23:59:59";
 
 	}
 
@@ -38,8 +38,8 @@ app1.factory('dateFactory', function($http, $q) {
 	{ 
 		start=new Date().toISOString().slice(0, 10).replace('T', ' ')+" 00:00:00";
 		var month= new Date();
-	    month.setDate(month.getDate() + 30);
-	    end=month.toISOString().slice(0, 10).replace('T', ' ')+" 23:59:59";
+		month.setDate(month.getDate() + 30);
+		end=month.toISOString().slice(0, 10).replace('T', ' ')+" 23:59:59";
 
 	}
 
@@ -51,8 +51,8 @@ app1.factory('dateFactory', function($http, $q) {
 
 			method: 'GET',
 			
-			 url: 'http://localhost:3000/date'
-		 }).then(function successCallback(response) {
+			url: 'http://localhost:3000/date'
+		}).then(function successCallback(response) {
 			// this callback will be called asynchronously
 			// when the response is available
 				console.log("success");
@@ -65,9 +65,7 @@ app1.factory('dateFactory', function($http, $q) {
           console.log(response);
 			// called asynchronously if an error occurs
 			// or server returns response with an error status.
-				});
-  		
-  
+				});  
     return d.promise;       
   }
   
