@@ -14,6 +14,7 @@
 <script  type="text/javascript" src="app.js"> </script>
 <script  type="text/javascript" src="route.js"> </script>
 <script  type="text/javascript" src="service.js"> </script>
+<script  type="text/javascript" src="animate.js"> </script>
 
 
 </head>
@@ -25,10 +26,11 @@
 		<div class="up">
 	    	<div class="city"> <b>Bangalore </b></div>
 
-	    	<div class="addons" ng-init="showDiv=0">
+	    	<div class="addons">
 
-	    		<button id="login" ng-click="showDiv=1" type="button">LOGIN</button>
-	   			<button id="create" type="button"> + Create</button> 
+	    		<a href='#login' id="login"  type="button">LOGIN</a>
+	    		<a href='#register' id="register"  type="button">SIGN UP</a>
+	   			<a href='#create' id="create" type="button"> + Create</a> 
 	   		</div>
 		</div>
 
@@ -36,7 +38,6 @@
 		<div class="Title">
 	 	<b> UPCOMING EVENTS </b>
 		</div>
-
 
 	</div>
 
@@ -61,16 +62,6 @@
 
 
 	</div>
-
-    <div class="login" ng-show="showDiv">
-      <h2>Welcome!!</h2>
-        <p><b>LOGIN</b></p>
-        username: <input id="login_username" type="text"></input><br/><br/>
-        password: <input id="login_password" type="password"></input><br/><br/>
-        <button id="loginButton"> SUBMIT</button>
-        <button id="cancelButton"> Cancel </button>
-    </div>
-
 
    <div ng-view >
 

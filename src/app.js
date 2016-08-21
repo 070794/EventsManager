@@ -1,12 +1,13 @@
 
 var app1=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch']);
 
-app1.controller("EventController", function($scope,$location,$http,$routeParams,resultsFactory,typeFactory,dateFactory){
+app1.controller("EventController", function($scope,$location,$http,$routeParams,
+  resultsFactory,typeFactory,dateFactory){
 	
 	$scope.products=events;
 	
 	$scope.go = function (path ,eventid) {
-		console.log(eventid);
+		//console.log(eventid);
     $location.path( path + "/"+eventid);
     };
 
@@ -62,7 +63,7 @@ app1.controller("ImageController",function($scope,$routeParams,imageFactory,even
 
     $scope.slides=images;
     $scope.product=event;
-     console.log($routeParams);
+    // console.log($routeParams);
 
     $scope.current = 0;
 
@@ -119,46 +120,108 @@ app1.controller("ImageController",function($scope,$routeParams,imageFactory,even
     });
 });	
 
+app1.controller("formController",function($scope,createFactory){
+ 
+  $scope.event_type="art";
+   $scope.myFunc=function(){
+    $scope.data={
+    'event_title':  $scope.event_title,
+    'event_date':  $scope.event_date.toISOString().slice(0, 10)+" "+ $scope.event_time.toISOString().slice(12, 19),
 
-app1.animation('.slide-animation', function () {
-        return {
-            beforeAddClass: function (element, className, done) {
-                var scope = element.scope();
+    'event_venue':  $scope.event_venue,
+    'event_type':  $scope.event_type,
+    'event_author': "sdfjhsjf",
+    'event_price':  $scope.event_price,
+    'event_description':  $scope.event_description
 
-                if (className == 'ng-hide') {
-                    var finishPoint = element.parent().width;
-                    if(scope.direction !== 'right') {
-                        finishPoint = -finishPoint;
-                    }
-                    TweenMax.to(element, 0.5, {left: finishPoint, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            },
-            removeClass: function (element, className, done) {
-                var scope = element.scope();
+  };
+  $scope.getid;
 
-                if (className == 'ng-hide') {
-                    element.removeClass('ng-hide');
+   console.log( $scope.data);
+   console.log($scope.event_time.toISOString().slice(12, 19));
 
-                    var startPoint = element.parent().width;
-                    if(scope.direction === 'right') {
-                        startPoint = -startPoint;
-                    }
+   createFactory.all( $scope.data).then(
+        function(res){
+          $scope.getid = res.insertId;
+          console.log($scope.getid);
+          console.log("updated");
+        },
+        function(err){
+          console.error(err);
+        });
+  
+ };
 
-                    TweenMax.fromTo(element, 0.5, { left: startPoint }, {left: 0, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            }
-        };
+});
+
+
+
+app1.controller("registerController",function($scope,registerFactory){
+ 
+  
+   $scope.myFunc=function(){
+    $scope.data={
+    'name':$scope.name,
+    'email':$scope.email,
+    'password':$scope.password
+
+  };
+
+
+   console.log( $scope.data);
+   
+
+  registerFactory.all( $scope.data).then(
+        function(res){
+          $scope.getid = res;
+          console.log($scope.getid);
+          console.log("updated");
+        },
+        function(err){
+          console.error(err);
+        });
+  
+ };
+
+});
+
+
+
+
+
+
+app1.controller("loginController",function($scope,loginFactory){
+ 
+
+   $scope.myFunc=function(){
+    $scope.data={
+    'username':$scope.usr,
+    'password':$scope.password
+
+  };
+ 
+
+   console.log( $scope.data);
+
+   loginFactory.all($scope.data).then(
+        function(res){
+          $scope.name = res[0].name;
+          //console.log($scope.getid);
+          console.log("updated");
+        },
+        function(err){
+          console.error(err);
+        });
+  
+ };
+
 });
 
 
 
 	
+
+
 var events=[];    // array of all events 
 var images=[];    // array of all inages
 var event=[];     // data of one single event

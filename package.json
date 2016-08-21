@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "shows the list of upcoming events",
   "main": "app.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/070794/EventsManager"
@@ -17,6 +16,7 @@
   "homepage": "https://github.com/070794/EventsManager#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "multer": "^1.2.0",
     "mysql": "^2.11.1"
   }
 }

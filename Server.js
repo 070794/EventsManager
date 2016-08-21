@@ -74,6 +74,7 @@ app.get("/type",function (req,res){
 
 });
 
+
 app.get("/date",function (req,res){
      
        connection.query("SELECT * from events where dt >= '"+ req.query.date1+"' and dt <= '"+ req.query.date2+"'" ,function (err,results){
@@ -84,12 +85,32 @@ app.get("/date",function (req,res){
 
 });
 
-app.get("/userlogin",function (req,res){
-     
-       connection.query("SELECT name from user where email= '"+ req.query.email+"' and pass = '"+ req.query.pass+"'" ,function (err,results){
-        //console.log("SELECT * from events where dt >= '"+ req.query.date1+"' and dt <= '"+ req.query.date2+"'");
-        res.send(results);
 
+app.get("/userlogin",function (req,res){
+       connection.query("SELECT name from user where email= '"+ req.query.username+"' and pass = '"+ req.query.password+"'" ,function (err,results){
+        //console.log("SELECT * from events where dt >= '"+ req.query.date1+"' and dt <= '"+ req.query.date2+"'");
+       res.send(results);
+       console.log("SELECT name from user where email= '"+ req.query.username+"' and pass = '"+ req.query.password+"'");
+       console.log(err);
+    });
+});
+
+
+app.post("/createEvent",function (req,res){
+     connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`) "+
+      "Values('"+ req.query.event_title+"','"+ req.query.event_date+"','"+ req.query.event_venue+"','"+ req.query.event_type+"','"+ req.query.event_author+"','"+ req.query.event_price+"','"+ req.query.event_description+"')",function(err,results){
+     
+        res.send(results);
+        console.log(err);
+    });
+});
+
+app.post("/register",function (req,res){
+     connection.query("Insert into user(`name`,`email`,`pass`) "+
+      "Values('"+ req.query.name+"','"+ req.query.email+"','"+ req.query.password+"')",function(err,results){
+     
+        res.send(results);
+        console.log(err);
     });
 });
 

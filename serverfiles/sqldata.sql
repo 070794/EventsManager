@@ -24,8 +24,9 @@ CREATE TABLE images(
       PRIMARY KEY ( event_id , image_path )
     );
 
-
-
+Insert into user Values(1,'riya','riya@gmail.com','1234');
+Insert into user Values(2,'mohit','mohit@gmail.com','1234');
+Insert into user Values(3,'kaushal','kaushal@gmail.com','1234');
 
 /* event1 ... */
 

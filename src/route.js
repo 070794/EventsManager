@@ -19,7 +19,15 @@ app1.config(['$routeProvider','$locationProvider',function($routeProvider,$locat
 	})
 	.when('/login',{
 		templateUrl: 'login.html',
-        controller:'LoginController'
-	});
+        controller:'loginController'
+	})
+	.when('/create',{
+		templateUrl: 'create.html',
+        controller:'formController'
+	})
+	.when('/register',{
+		templateUrl: 'register.html',
+        controller:'registerController'
+    });
 
 }]);

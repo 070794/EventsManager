@@ -1,4 +1,5 @@
 
+
 ///----------------------------
 
 app1.factory('resultsFactory', function($http, $q) { 
@@ -228,9 +229,9 @@ app1.factory('eventFactory', function($http, $q) {
 app1.factory('loginFactory', function($http, $q) { 
   var results = {};  
   
-  function _all(email,pass){
+  function _all(data){
     var d = $q.defer();
-    var data={email: email, pass: pass};
+   // var data={email: email, pass: pass};
 
       $http({
         params: data,
@@ -258,9 +259,74 @@ app1.factory('loginFactory', function($http, $q) {
   return results;
 }); 
 
-  
+//***********************-----------------------CREATE------------ ************************************ 
 
+app1.factory('createFactory', function($http, $q) { 
+  var results = {};  
   
+  function _all(data){
+    var d = $q.defer();
+    
+      $http({
+        params: data,
+       headers:{'Accept':'application/json'}, 
+       method: 'POST',
+     url: 'http://localhost:3000/createEvent'
+    }).then(function successCallback(response) {
+        // this callback will be called asynchronously
+        // when the response is available
+        console.log("success");
+        d.resolve(response.data);
+        console.log(response.data);
+        
+      }, function errorCallback(response) {
+        console.log("failure");
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+      
+  
+    return d.promise;       
+  }
+  
+  results.all = _all;
+  return results;
+}); 
+
+
+//*************************************************************************************************
+
+app1.factory('registerFactory', function($http, $q) { 
+  var results = {};  
+  
+  function _all(data){
+    var d = $q.defer();
+    
+      $http({
+       params: data,
+       headers:{'Accept':'application/json'}, 
+       method: 'POST',
+     url: 'http://localhost:3000/register'
+    }).then(function successCallback(response) {
+        // this callback will be called asynchronously
+        // when the response is available
+        console.log("success");
+        d.resolve(response.data);
+        console.log(response.data);
+        
+      }, function errorCallback(response) {
+        console.log("failure");
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+      
+  
+    return d.promise;       
+  }
+  
+  results.all = _all;
+  return results;
+}); 
 
 
 
