@@ -20,6 +20,7 @@ app1.factory('resultsFactory', function($http, $q) {
 
   		}, function errorCallback(response) {
   			console.log("failure");
+        console.log(response);
     		// called asynchronously if an error occurs
     		// or server returns response with an error status.
   		});
@@ -59,7 +60,8 @@ app1.factory('typeFactory', function($http, $q) {
     		
 
   		}, function errorCallback(response) {
-  			console.log("failure");
+          console.log("failure");
+          console.log(response);
     		// called asynchronously if an error occurs
     		// or server returns response with an error status.
   		});
@@ -140,6 +142,7 @@ app1.factory('dateFactory', function($http, $q) {
 
 				}, function errorCallback(response) {
 					console.log("failure");
+          console.log(response);
 			// called asynchronously if an error occurs
 			// or server returns response with an error status.
 				});
@@ -211,6 +214,7 @@ app1.factory('eventFactory', function($http, $q) {
 
      }, function errorCallback(response) {
        console.log("failure");
+       console.log(response);
        // called asynchronously if an error occurs
        // or server returns response with an error status.
      });
@@ -247,6 +251,7 @@ app1.factory('loginFactory', function($http, $q) {
         
       }, function errorCallback(response) {
         console.log("failure");
+        console.log(response);
         // called asynchronously if an error occurs
         // or server returns response with an error status.
       });
@@ -281,6 +286,7 @@ app1.factory('createFactory', function($http, $q) {
         
       }, function errorCallback(response) {
         console.log("failure");
+        console.log(response);
         // called asynchronously if an error occurs
         // or server returns response with an error status.
       });
@@ -316,6 +322,7 @@ app1.factory('registerFactory', function($http, $q) {
         
       }, function errorCallback(response) {
         console.log("failure");
+        console.log(response);
         // called asynchronously if an error occurs
         // or server returns response with an error status.
       });
