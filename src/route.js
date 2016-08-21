@@ -16,6 +16,10 @@ app1.config(['$routeProvider','$locationProvider',function($routeProvider,$locat
 	.when('/datetime/:date_id',{
 		templateUrl: 'view.html',
         controller:'EventController'
+	})
+	.when('/login',{
+		templateUrl: 'login.html',
+        controller:'LoginController'
 	});
 
 }]);

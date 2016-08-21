@@ -84,6 +84,15 @@ app.get("/date",function (req,res){
 
 });
 
+app.get("/userlogin",function (req,res){
+     
+       connection.query("SELECT name from user where email= '"+ req.query.email+"' and pass = '"+ req.query.pass+"'" ,function (err,results){
+        //console.log("SELECT * from events where dt >= '"+ req.query.date1+"' and dt <= '"+ req.query.date2+"'");
+        res.send(results);
+
+    });
+});
+
 
 
 app.use(express.static('src'));

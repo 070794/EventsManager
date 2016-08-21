@@ -4,12 +4,11 @@ var app1=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch']);
 app1.controller("EventController", function($scope,$location,$http,$routeParams,resultsFactory,typeFactory,dateFactory){
 	
 	$scope.products=events;
-	//$scope.images=events;
+	
 	$scope.go = function (path ,eventid) {
 		console.log(eventid);
     $location.path( path + "/"+eventid);
     };
-
 
     if($routeParams.type_id){
       console.log($routeParams.type_id);
@@ -48,39 +47,13 @@ app1.controller("EventController", function($scope,$location,$http,$routeParams,
       );
      }
     
+  	$scope.typeclick= function(path,$event){	
+       $location.path( path + "/"+$event.target.id);
+	   };
 
-
-  	$scope.typeclick= function(path,$event){
-  		// console.log($event.target.id);
-  		// typeFactory.all($event.target.id).then(
-	   //  function(res){
-	   //    $scope.products = res;
-	   //    console.log("updated");
-
-	   //  },
-	   //  function(err){
-	   //    console.error(err);
-	   //  })
-
-     $location.path( path + "/"+$event.target.id);
-	    };
-
-	  	$scope.dateclick= function(path,$event){
-	  		// console.log($event.target.id);
-	  		// dateFactory.all($event.target.id).then(
-		   //  function(res){
-		   //    $scope.products = res;
-		   //    console.log("updated");
-
-		   //  },
-		   //  function(err){
-		   //    console.error(err);
-	    // 	})
-      $location.path( path + "/"+$event.target.id);
+	  $scope.dateclick= function(path,$event){
+        $location.path( path + "/"+$event.target.id);
        };	
-
-   
-
 }); 
 
 
@@ -144,10 +117,8 @@ app1.controller("ImageController",function($scope,$routeParams,imageFactory,even
     function(err){
       console.error(err);
     });
-
-
-
 });	
+
 
 app1.animation('.slide-animation', function () {
         return {
@@ -183,7 +154,10 @@ app1.animation('.slide-animation', function () {
                 }
             }
         };
-    });
+});
+
+
+
 	
 var events=[];    // array of all events 
 var images=[];    // array of all inages

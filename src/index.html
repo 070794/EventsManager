@@ -25,9 +25,9 @@
 		<div class="up">
 	    	<div class="city"> <b>Bangalore </b></div>
 
-	    	<div class="addons">
+	    	<div class="addons" ng-init="showDiv=0">
 
-	    		<button id="login" type="button">LOGIN</button>
+	    		<button id="login" ng-click="showDiv=1" type="button">LOGIN</button>
 	   			<button id="create" type="button"> + Create</button> 
 	   		</div>
 		</div>
@@ -58,11 +58,27 @@
     	<button ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</button>
     	</div>
 
+
+
 	</div>
-    
+
+    <div class="login" ng-show="showDiv">
+      <h2>Welcome!!</h2>
+        <p><b>LOGIN</b></p>
+        username: <input id="login_username" type="text"></input><br/><br/>
+        password: <input id="login_password" type="password"></input><br/><br/>
+        <button id="loginButton"> SUBMIT</button>
+        <button id="cancelButton"> Cancel </button>
+    </div>
+
+
    <div ng-view >
 
    </div>
+
+
+   
+
 
 
 
