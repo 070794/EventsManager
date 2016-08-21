@@ -61,9 +61,9 @@ Get as many of your family and friends to join us all at the looping course so t
 
 
 Insert into images values(6,"s2_0.jpg");
-Insert into images values(6,"s2_1.jpeg");
-Insert into images values(6,"s2_2.jpeg");
-Insert into images values(6,"s2_3.jpeg");
+Insert into images values(6,"s2_1.jpg");
+Insert into images values(6,"s2_2.jpg");
+Insert into images values(6,"s2_3.jpg");
 
 
 

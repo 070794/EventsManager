@@ -5,8 +5,12 @@
 <base href="/">
 <link type="text/css" rel=stylesheet href=style.css />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script> -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+<script type="text/javascript"  src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script> -->
+
 <script  type="text/javascript" src="app.js"> </script>
 <script  type="text/javascript" src="route.js"> </script>
 <script  type="text/javascript" src="service.js"> </script>
@@ -40,24 +44,24 @@
 	<div class="filter">
 
 		<div class="eventtype">
-	     	<button ng-click="typeclick($event)" id="art" type="button">Arts & Culture </button>
-	     	<button ng-click="typeclick($event)" id="health" type="button">Health</button>
-	     	<button ng-click="typeclick($event)" id="sports" type="button">Sports & Fitness</button>
-	     	<button ng-click="typeclick($event)" id="adventure" type="button">Adventure</button>
-	     	<button ng-click="typeclick($event)" id="party" type="button">Parties & NightLife</button>
+	     	<button ng-click="typeclick('type',$event)" id="art" type="button">Arts & Culture </button>
+	     	<button ng-click="typeclick('type',$event)" id="entertainment" type="button">Entertainment</button>
+	     	<button ng-click="typeclick('type',$event)" id="sports" type="button">Sports & Fitness</button>
+	     	<button ng-click="typeclick('type',$event)" id="adventure" type="button">Adventure</button>
+	     	<button ng-click="typeclick('type',$event)" id="party" type="button">Parties & NightLife</button>
 	     </div>
 
     	<div class="date">
-    	<button ng-click="dateclick($event)" id="today" type="button">Today</button>
-    	<button ng-click="dateclick($event)" id="tomorrow" type="button">Tommorow</button>
-    	<button ng-click="dateclick($event)" id="week" type="button">This Week</button>
-    	<button ng-click="dateclick($event)" id="month" type="button">This Month</button>
+    	<button ng-click="dateclick('datetime',$event)" id="today" type="button">Today</button>
+    	<button ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</button>
+    	<button ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</button>
+    	<button ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</button>
     	</div>
 
 	</div>
     
-    <a href="#allevents">ejgfjegrjhdfvjbdhj</a>
-   <div ng-view>
+   <div ng-view >
+
    </div>
 
 
