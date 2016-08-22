@@ -1,12 +1,12 @@
 		app1.factory('dateFactory', function($http, $q) { 
-		  var results = {}; 
+			var results = {}; 
 
-		    var start;
-		    var end;
-		  
-		 function _all(eventid){
-		    var d = $q.defer();
-		    
+			var start;
+			var end;
+
+			function _all(eventid){
+			var d = $q.defer();
+
 			if(eventid=='today')
 			{
 
@@ -43,7 +43,7 @@
 
 			}
 
-		    var data={date1: start, date2:end};
+			var data={date1: start, date2:end};
 
 			$http({
 				params: data,
@@ -60,15 +60,15 @@
 						console.log(response.data);
 						
 
-						}, function errorCallback(response) {
+						},function errorCallback(response) {
 							console.log("failure");
-		          console.log(response);
+							console.log(response);
 					// called asynchronously if an error occurs
 					// or server returns response with an error status.
 						});  
-		    return d.promise;       
-		  }
-		  
-		  results.all = _all;
-		  return results;
+				return d.promise;       
+				}
+
+				results.all = _all;
+				return results;
 		}); 

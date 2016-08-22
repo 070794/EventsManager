@@ -2,11 +2,11 @@
 var events=[];
   app1.controller("EventController", function($scope,$location,$http,$routeParams,
     resultsFactory,typeFactory,dateFactory){
-  	
-  	$scope.products=events;
-  	
-  	$scope.go = function (path ,eventid) {
-  		//console.log(eventid);
+
+      $scope.products=events;
+
+      $scope.go = function (path ,eventid) {
+      //console.log(eventid);
       $location.path( path + "/"+eventid);
       };
 
