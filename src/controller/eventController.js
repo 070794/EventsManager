@@ -46,12 +46,12 @@ app1.controller("EventController", function($scope,$location,$http,$routeParams,
       }
       );
      }
-    
-  	$scope.typeclick= function(path,$event){	
-       $location.path( path + "/"+$event.target.id);
-	   };
 
-	  $scope.dateclick= function(path,$event){
+    $scope.typeclick= function(path,$event){	
+       $location.path( path + "/"+$event.target.id);
+     };
+
+    $scope.dateclick= function(path,$event){
         $location.path( path + "/"+$event.target.id);
-       };	
+       };
 }); 

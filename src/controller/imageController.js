@@ -36,10 +36,10 @@ app1.controller("ImageController",function($scope,$routeParams,imageFactory,even
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
         };
 
-  	imageFactory.all($routeParams.event_id).then(
+    imageFactory.all($routeParams.event_id).then(
     function(res){
-    	  console.log("Here");
-    	  console.log($routeParams);
+        console.log("Here");
+        console.log($routeParams);
       $scope.slides = res;
       console.log(res);
       console.log($scope.slides);
@@ -59,4 +59,4 @@ app1.controller("ImageController",function($scope,$routeParams,imageFactory,even
     function(err){
       console.error(err);
     });
-});	
+});
