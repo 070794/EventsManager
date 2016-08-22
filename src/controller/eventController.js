@@ -1,3 +1,5 @@
+
+var events=[];
 app1.controller("EventController", function($scope,$location,$http,$routeParams,
   resultsFactory,typeFactory,dateFactory){
 	

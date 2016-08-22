@@ -14,12 +14,11 @@ app1.factory('resultsFactory', function($http, $q) {
           console.log(response.data);
           }, function errorCallback(response) {
           console.log("failure");
-        console.log(response);
-    		// called asynchronously if an error occurs
-    		// or server returns response with an error status.
+          console.log(response);
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
       });
-  		
-  
+
     return d.promise;       
   }
   
