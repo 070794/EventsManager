@@ -28,6 +28,7 @@ app1.config(['$routeProvider','$locationProvider',function($routeProvider){
 	.when('/register',{
 		templateUrl: 'register.html',
         controller:'registerController'
-    });
+    })
+    .otherwise({ redirectTo: '/' });
 
 }]);

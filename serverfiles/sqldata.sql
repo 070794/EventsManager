@@ -53,8 +53,8 @@ Insert into events(title,dt,venue,type,author,price,des)
 Values ('Great Malnad Challenge','2016-08-30 09:00:00','MYSORE','Sports','Karnataka cycling association',500,
   "Calling all Adventurers out there for the cycling trip of a lifetime. The Great Malnad Challenge is an All India MTB challenge which is into its 7th edition this year! What started off as a competitive challenge has now shaped into an enviable event which is pegged to be the biggest and most challenging MTB ride in South India with multiple categories and attractive rewards. All adventure enthusiasts and cyclists are invited to take part in the event and give their pedals a push.");
 Insert into images values(5,"s1_0.jpg");
-Insert into images values(5,"s1_1.jpeg");
-Insert into images values(5,"s1_2.jpeg");
+Insert into images values(5,"s1_1.jpg");
+Insert into images values(5,"s1_2.jpg");
 
 /*event 4 */
 Insert into events(title,dt,venue,type,author,price,des,thumb) 
@@ -145,6 +145,22 @@ Insert into images values(14,"art2_1.jpg");
 Insert into images values(14,"art2_2.jpg");
 Insert into images values(14,"art2_3.jpg");
 
+/*event 13 */
+Insert into events(title,dt,venue,type,author,price,des,thumb) 
+Values ('International Football League','2016-09-03 14:30:00','Koramangla','sports','Football Federation', 2990,'Age Category :  5 - 16 yrs organized in 5 Divisions age wise.Participating kids from Leading public schools and international schools in delhi.14 League Matches per team across the season.+ 1 Cup Competition (2-4 matches per team).28 Coaching Sessions - By Professional, D Certificate Football Coaches Teams Managed by parents - Ensuring a personal touch & higher responsibility.','sp3_0.jpg');
+Insert into images values(24,"sp3_0.jpg");
+Insert into images values(24,"sp3_1.jpeg");
+Insert into images values(24,"sp3_2.jpg");
+Insert into images values(24,"sp3_3.jpeg");
+
+
+/* event 14 */
+Insert into events(title,dt,venue,type,author,price,des,thumb) 
+Values ('friendly Cricket','2016-09-04 15:30:00','whitefield','sports','Karnataka Cricket Association', 899,'Cricket is a bat-and-ball game played between two teams of eleven players on a cricket field, at the centre of which is a rectangular 22-yard-long pitch with a wicket, a set of three wooden stumps sited at each end. One team, designated the batting team, attempts to score as many runs as possible, whilst their opponents field. Each phase of play is called an innings. After either ten batsmen have been dismissed or a set number of overs have been completed, the innings ends and the two teams then swap roles. The winning team is the one that scores the most runs, including any extras gained, during their period batting.','sp4_0.jpeg');
+Insert into images values(25,"sp4_0.jpeg");
+Insert into images values(25,"sp4_1.jpeg");
+Insert into images values(25,"sp4_2.jpg");
+Insert into images values(25,"sp4_3.jpg");
 
 
 

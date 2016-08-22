@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "shows the list of upcoming events",
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/070794/EventsManager"
@@ -16,7 +18,11 @@
   "homepage": "https://github.com/070794/EventsManager#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "gulp": "^3.9.1",
     "multer": "^1.2.0",
-    "mysql": "^2.11.1"
+    "mysql": "^2.11.1",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-http-bearer": "^1.0.1"
   }
 }
