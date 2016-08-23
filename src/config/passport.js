@@ -3,6 +3,7 @@
 // load all the things we need
 var LocalStrategy    = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
+var GoogleStrategy = require('passport-google-oauth2').Strategy;
 
 // load up the user model
 var User       = require('../app/models/user');
@@ -23,9 +24,7 @@ module.exports = function(passport) {
             done(err, user);
         });
     });
-    
-    // code for login (use('local-login', new LocalStategy))
-    // code for signup (use('local-signup', new LocalStategy))
+  
 
     // =========================================================================
     // FACEBOOK ================================================================
@@ -82,3 +81,15 @@ module.exports = function(passport) {
     }));
 
 };
+
+
+// config
+
+
+
+
+
+
+
+
+

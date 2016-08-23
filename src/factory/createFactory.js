@@ -1,5 +1,5 @@
-    app1.factory('createFactory', function($http, $q) { 
-      var results = {};  
+    app1.factory('createFactory', function($http, $q) {   var results = {};
+
       
       function _all(data){
         var d = $q.defer();
