@@ -119,7 +119,7 @@ app.post("/createEvent",function (req,res){
 
 app.get('/', function (req, res) {
   console.log(req);
-  res.sendFile(__dirname+"/"+"src/index.html");
+  res.render("index.ejs");
 });
 
 app.listen(3000, function () {
