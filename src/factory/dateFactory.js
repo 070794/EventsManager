@@ -4,7 +4,7 @@
 			var start;
 			var end;
 
-			function _getAll(eventid){
+			function _all(eventid){
 			var d = $q.defer();
 
 			if(eventid=='today')
@@ -69,6 +69,6 @@
 				return d.promise;       
 				}
 
-				results.all = _getAll;
+				results.all = _all;
 				return results;
 		}); 

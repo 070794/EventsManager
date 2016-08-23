@@ -1,6 +1,8 @@
 
 
-<div class="total" ng-controller="EventController" ng-repeat="event in products" id={{event.event_id}} ng-click="go('events',event.event_id)">
+<div class="total" ng-controller="EventController" 
+      ng-repeat="event in products" id={{event.event_id}} 
+       ng-click="go('events',event.event_id)">
 	<div class="box" > 
 		<img ng-src="images/{{event.thumb}}">
 		<div class="overbox">
@@ -9,7 +11,9 @@
 	</div>
     <div class="datadata">
 		<div class=" belowtext"> Venue: {{event.venue}} </div>
-	    <div class=" belowtext"> Date: {{event.dt.replace('T', ' ').slice(0,10)}} </div>
+	    <div class=" belowtext"> 
+	        Date: {{event.dt.replace('T', ' ').slice(0,10)}} 
+	    </div>
 	</div>  
 </div>  
 

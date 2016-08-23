@@ -1,7 +1,7 @@
 //explora is the name of the website.
 var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch']);
  
-app1.config(['$routeProvider','$locationProvider',function($routeProvider){
+explora.config(['$routeProvider','$locationProvider',function($routeProvider){
 
 	$routeProvider.
 	when('/',{
@@ -36,24 +36,7 @@ app1.config(['$routeProvider','$locationProvider',function($routeProvider){
 
 }]);
 
-app1.factory('facebookService', function($q) {
-    return {
-        getMyLastName: function() {
-            var deferred = $q.defer();
-            FB.api('/me', {
-                fields: 'last_name'
-            }, function(response) {
-                if (!response || response.error) {
-                    deferred.reject('Error occured');
-                } else {
-                    deferred.resolve(response);
-                }
-            });
-            return deferred.promise;
-        }
-    }
-});
-	 
+ 
 	
 
 

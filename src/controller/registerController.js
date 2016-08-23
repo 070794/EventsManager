@@ -8,11 +8,7 @@
       'password':$scope.password
 
     };
-
-
-     console.log( $scope.data);
      
-
     registerFactory.all( $scope.data).then(
           function(res){
             $scope.getid = res;

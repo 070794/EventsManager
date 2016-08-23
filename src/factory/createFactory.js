@@ -2,7 +2,7 @@
       var results = {};
 
       
-      function _getAll(data){
+      function _all(data){
         var d = $q.defer();
         
           $http({
@@ -28,6 +28,6 @@
         return d.promise;       
       }
       
-      results.all = _getAll;
+      results.all = _all;
       return results;
     }); 

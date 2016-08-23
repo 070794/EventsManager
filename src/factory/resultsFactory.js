@@ -1,7 +1,7 @@
-    explora.factory('resultsFactory', function($http, $q) { 
+    explora.factory('resultsFactory',function($http, $q) { 
       var results = {};  
       
-      function _getAll(){
+      function _all(){
         var d = $q.defer();
           $http({
         method: 'GET',
@@ -22,6 +22,6 @@
         return d.promise;       
       }
       
-      results.all = _getAll;
+      results.all = _all;
       return results;
     }); 

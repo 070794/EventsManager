@@ -1,7 +1,7 @@
 var events=[];
   
-  explora.controller("EventController", function($scope,$location,$http,$routeParams,
-    resultsFactory,typeFactory,dateFactory){
+  explora.controller("EventController", function($scope,$location,$http,
+    $routeParams,resultsFactory,typeFactory,dateFactory){
 
       $scope.products=events;
 
@@ -35,7 +35,7 @@ var events=[];
           });
        }
        else{
-        console.log("all");
+        
         resultsFactory.all().then(
         function(res){
           $scope.products = res;

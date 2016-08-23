@@ -1,7 +1,7 @@
-    explora.factory('loginFactory', function($http, $q) { 
+    explora.factory('loginFactory', [function($http, $q) { 
       var results = {};  
       
-      function _getAll(data){
+      function _all(data){
         var d = $q.defer();
        // var data={email: email, pass: pass};
 
@@ -28,6 +28,6 @@
         return d.promise;       
       }
       
-      results.all = _getAll;
+      results.all = _all;
       return results;
-    }); 
+    }]); 

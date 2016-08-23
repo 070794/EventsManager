@@ -30,8 +30,7 @@ app.get("/events",function (req,res){
 });
 
 app.get("/images",function (req,res){
-      connection.query("SELECT image_path from images where event_id= '"+
-        req.query.image+"'",function (err,results){
+      connection.query("SELECT image_path from images where event_id= '"+req.query.image+"'",function (err,results){
       
           res.send(results);
     });
@@ -41,8 +40,7 @@ app.get("/images",function (req,res){
 
 app.get("/event_data",function (req,res){
 
-      connection.query("SELECT * from events where event_id= '"+req.query.event+
-        "'",function (err,results){
+      connection.query("SELECT * from events where event_id= '"+req.query.event+"'",function (err,results){
         res.send(results);
     });
 
@@ -50,8 +48,7 @@ app.get("/event_data",function (req,res){
 
 app.get("/type",function (req,res){
 
-      connection.query("SELECT * from events where type = '"+ req.query.type+
-        "'" ,function (err,results){
+      connection.query("SELECT * from events where type = '"+ req.query.type+"'" ,function (err,results){
           res.send(results);
     });
 
@@ -70,8 +67,7 @@ app.get("/date",function (req,res){
 
 
 app.get("/userlogin",function (req,res){
-       connection.query("SELECT name from user where email= '"+ req.query.username+
-        "' and pass = '"+ req.query.password+"'" ,function (err,results){
+       connection.query("SELECT name from user where email= '"+ req.query.username+"' and pass = '"+ req.query.password+"'" ,function (err,results){
 
        res.send(results);
     });
@@ -79,10 +75,7 @@ app.get("/userlogin",function (req,res){
 
 
 app.post("/createEvent",function (req,res){
-     connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`) "+
-      "Values('"+ req.query.event_title+"','"+ req.query.event_date+"','"+ 
-      req.query.event_venue+"','"+req.query.event_type+"','"+ req.query.event_author+"','"+
-       req.query.event_price+"','"+ req.query.event_description+"')",function(err,results){
+     connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`) "+"Values('"+ req.query.event_title+"','"+ req.query.event_date+"','"+req.query.event_venue+"','"+req.query.event_type+"','"+ req.query.event_author+"','"+req.query.event_price+"','"+ req.query.event_description+"')",function(err,results){
      
         res.send(results);
         console.log(err);
