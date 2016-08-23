@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 var mysql= require('mysql');
+var passport= require('passport');
+//var passportfb= require('passport');
 
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -93,6 +95,50 @@ app.post("/register",function (req,res){
         console.log(err);
     });
 });
+
+require('./src/config/passport.js')(passport);
+require('./src/app/routes.js')(app,passport);
+
+// app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+//   // handle the callback after facebook has authenticated the user
+// app.get('/auth/facebook/callback',
+//   passport.authenticate('facebook', {
+//     successRedirect : '/profile',
+//     failureRedirect : '/'
+//   }));
+
+// // =====================================
+// // LOGOUT ==============================
+// // =====================================
+// app.get('/logout', function(req, res) {
+//   req.logout();
+//   res.redirect('/');
+// });
+
+
+// app.use(bodyParser.json());
+// var storage =   multer.diskStorage({
+//   destination: function (req, file, callback) {
+//     callback(null, './uploads');
+//   },
+//   filename: function (req, file, callback) {
+//     callback(null, file.fieldname + '-' + Date.now());
+//   }
+// });
+// var upload = multer({ storage : storage }).array('userPhoto',2);
+
+// app.post('/api/photo',function(req,res){
+//     upload(req,res,function(err) {
+//         //console.log(req.body);
+//         //console.log(req.files);
+//         if(err) {
+//             return res.end("Error uploading file.");
+//         }
+//         res.end("File is uploaded");
+//     });
+// });
+
 
 
 app.use(express.static('src'));

@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "shows the list of upcoming events",
   "main": "app.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/070794/EventsManager"
@@ -17,12 +15,19 @@
   },
   "homepage": "https://github.com/070794/EventsManager#readme",
   "dependencies": {
+    "angular-file-upload": "^2.3.4",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
+    "mongoose": "^4.5.9",
     "multer": "^1.2.0",
     "mysql": "^2.11.1",
+    "ng-file-upload": "^12.0.4",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
-    "passport-http-bearer": "^1.0.1"
+    "passport-google-oauth": "^1.0.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0"
   }
 }

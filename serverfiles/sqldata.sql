@@ -163,7 +163,13 @@ Insert into images values(25,"sp4_2.jpg");
 Insert into images values(25,"sp4_3.jpg");
 
 
-
+/* event 15 */
+Insert into events(title,dt,venue,type,author,price,des,thumb) 
+Values ('IoT Olympaid','2016-09-03 12:30:00','Dodda Balapur Road Bangalore India','tech','Olympic Association',599,'IoT Olympiad is an initiative of Internet of Things Summit(IoT Summit 2016) and UNICOM to run India most prestigious Corporate Quiz on Embedded technology and IoT. Internet of Things: Link your World - Exploring the latest happening in IoT Industry and how the Internet of Things will offer businesses and consumers.The conference explores how the Internet of Things will re-shape our interactions with the real and virtual worlds in the coming years. Bringing together leading IoT companies, Start-Ups and the developer/ Professional community to exchange their ideas with the practical application and utilization of Internet of Things.Experience a complete technical immersion.','tech1_0.png');
+Insert into images values(26,"tech1_0.png");
+Insert into images values(26,"tech1_1.jpeg");
+Insert into images values(26,"tech1_2.jpg");
+Insert into images values(26,"tech1_3.jpg");
 
 
 
