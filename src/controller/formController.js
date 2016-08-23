@@ -1,4 +1,4 @@
-  app1.controller("formController",function($scope,createFactory){
+ explora.controller("formController",function($scope,createFactory){
    
     $scope.event_type="art";
      $scope.myFunc=function(){

@@ -1,4 +1,4 @@
-  app1.controller("registerController",function($scope,registerFactory){
+  explora.controller("registerController",function($scope,registerFactory){
    
     
      $scope.myFunc=function(){

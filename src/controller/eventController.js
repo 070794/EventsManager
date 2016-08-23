@@ -1,6 +1,6 @@
 var events=[];
   
-  app1.controller("EventController", function($scope,$location,$http,$routeParams,
+  explora.controller("EventController", function($scope,$location,$http,$routeParams,
     resultsFactory,typeFactory,dateFactory){
 
       $scope.products=events;

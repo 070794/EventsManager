@@ -1,5 +1,5 @@
-
-var app1=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch']);
+//explora is the name of the website.
+var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch']);
  
 app1.config(['$routeProvider','$locationProvider',function($routeProvider){
 

@@ -1,4 +1,4 @@
-  app1.controller("loginController",function($scope,loginFactory){
+  explora.controller("loginController",function($scope,loginFactory){
    
 
      $scope.myFunc=function(){

@@ -1,10 +1,10 @@
-		app1.factory('dateFactory', function($http, $q) { 
+		explora.factory('dateFactory', function($http, $q) { 
 			var results = {}; 
 
 			var start;
 			var end;
 
-			function _all(eventid){
+			function _getAll(eventid){
 			var d = $q.defer();
 
 			if(eventid=='today')
@@ -69,6 +69,6 @@
 				return d.promise;       
 				}
 
-				results.all = _all;
+				results.all = _getAll;
 				return results;
 		}); 

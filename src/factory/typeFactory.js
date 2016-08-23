@@ -1,7 +1,7 @@
-    app1.factory('typeFactory', function($http, $q) { 
+    explora.factory('typeFactory', function($http, $q) { 
       var results = {};  
       
-      function _all(eventid){
+      function _getAll(eventid){
         var d = $q.defer();
         var data={type: eventid};
 
@@ -30,6 +30,6 @@
         return d.promise;       
       }
       
-      results.all = _all;
+      results.all = _getAll;
       return results;
     }); 

@@ -1,14 +1,15 @@
-    app1.factory('createFactory', function($http, $q) {   var results = {};
+    explora.factory('createFactory', function($http, $q) { 
+      var results = {};
 
       
-      function _all(data){
+      function _getAll(data){
         var d = $q.defer();
         
           $http({
             params: data,
            headers:{'Accept':'application/json'}, 
            method: 'POST',
-         url: 'http://localhost:3000/createEvent'
+           url: 'http://localhost:3000/createEvent'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -27,6 +28,6 @@
         return d.promise;       
       }
       
-      results.all = _all;
+      results.all = _getAll;
       return results;
     }); 

@@ -1,7 +1,7 @@
-    app1.factory('imageFactory', function($http, $q) { 
+    explora.factory('imageFactory', function($http, $q) { 
       var results = {};  
       
-      function _all(event_id){
+      function _getAll(event_id){
         var d = $q.defer();
         var data={image: event_id};
 
@@ -29,6 +29,6 @@
         return d.promise;       
       }
       
-      results.all = _all;
+      results.all = _getAll;
       return results;
     }); 
