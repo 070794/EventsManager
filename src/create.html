@@ -1,5 +1,5 @@
 <div ng-controller="formController">
-<form id= "form" ng-submit="myFunc()"> 
+<form id= "form" > 
 	<label>Event Name:    </label>
 	    <input type="text"  ng-model="event_title" required /><br>
 	 <label>Event Start Date:   </label>
@@ -25,7 +25,7 @@
 	 	<input type="number" ng-model="event_price"  required /><br>
 	<label>	Description:  </label>
 		<input type="text" ng-model="event_description"  required  /><br>
-    <input type="submit" value="Submit">
+    <input type="button" value="Submit" ng-click="myFunc()">
     
 
 

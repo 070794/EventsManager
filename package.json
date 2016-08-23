@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "shows the list of upcoming events",
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/070794/EventsManager"
@@ -16,15 +18,15 @@
   "homepage": "https://github.com/070794/EventsManager#readme",
   "dependencies": {
     "angular-file-upload": "2.3.4",
-    "angular-local-storage": "^0.2.7",
-    "angular-webstorage": "^0.1.2",
+    "angular-local-storage": "0.2.7",
+    "angular-webstorage": "0.1.2",
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.15.2",
+    "body-parser": "1.15.2",
     "connect-ensure-login": "0.1.1",
     "cookie-parser": "1.4.3",
-    "ejs": "^2.5.1",
+    "ejs": "2.5.1",
     "express": "4.14.0",
-    "express-session": "^1.14.0",
+    "express-session": "1.14.0",
     "gulp": "3.9.1",
     "mongoose": "4.5.9",
     "morgan": "1.7.0",
@@ -34,7 +36,7 @@
     "passport": "0.3.2",
     "passport-facebook": "2.1.1",
     "passport-google-oauth": "1.0.0",
-    "passport-google-oauth2": "^0.1.6",
+    "passport-google-oauth2": "0.1.6",
     "passport-http-bearer": "1.0.1",
     "passport-local": "1.0.0"
   }

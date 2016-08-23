@@ -1,12 +1,25 @@
- 
-<div>
- <form id="uploadForm"
-          enctype="multipart/form-data"
-          action="/api/photo"
-          method="post">
-      <input type="file" name="userPhoto" multiple />
-      <input type="submit" value="Upload Image" name="submit">
-      <input type='text' id='random' name='random'><br>
-      <span id = "status"></span>
-</form>
-</div>
+<div >
+<form  ng-controller="uploadController" name="upload_form">
+        Single Image with validations
+
+    <input 
+        type="file" 
+        ngf-select 
+        ng-model="file" 
+        name="file" 
+        ngf-pattern="'image/*'"
+        accept="image/*" 
+        ngf-max-size="20MB" 
+        />
+    Image thumbnail: <img style="width:100px;" ng-show="!!file" ngf-thumbnail="file || '/thumb.jpg'"/>
+    <i ng-show="upload_form.file.$error.required">*required</i><br>
+    <i ng-show="upload_form.file.$error.maxSize">File too large 
+    {{file.size / 1000000|number:1}}MB: max 20M</i>
+   <!--  Multiple files
+    <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>
+    Drop files: <div ngf-drop ng-model="files" class="drop-box">Drop</div> -->
+    <input type="text" name="test" value="test" />    
+    <button type="submit" ng-click="submit()">submit</button>
+    <p>{{progress}}</p>
+ </form>
+ </div>

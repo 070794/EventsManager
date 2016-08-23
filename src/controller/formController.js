@@ -1,4 +1,4 @@
- explora.controller("formController",function($scope,createFactory){
+ explora.controller("formController",function($scope, $location,createFactory){
    
     $scope.event_type="art";
      $scope.myFunc=function(){
@@ -22,11 +22,15 @@
           function(res){
             $scope.getid = res.insertId;
             console.log($scope.getid);
+            console.log("/loggedin/#upload" + "/"+$scope.getid);
+            $location.path( "upload" + "/"+$scope.getid);
+
             console.log("updated");
           },
           function(err){
             console.error(err);
           });
+     return false;
     
    };
 

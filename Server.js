@@ -4,6 +4,7 @@ var app = express();
 var mysql=require('mysql'); 
 var passport= require('passport');
 var bodyParser=require('body-parser');
+var multer = require('multer');
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('src'));
@@ -89,13 +90,6 @@ app.get("/date",function (req,res){
 });
 
 
-// app.get("/userlogin",function (req,res){
-//        connection.query("SELECT name from user where email= '"+ req.query.username+"' and pass = '"+ req.query.password+"'" ,function (err,results){
-
-//        res.send(results);
-//     });
-// });
-
 
 app.post("/createEvent",function (req,res){
      connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`) "+"Values('"+ req.query.event_title+"','"+ req.query.event_date+"','"+req.query.event_venue+"','"+req.query.event_type+"','"+ req.query.event_author+"','"+req.query.event_price+"','"+ req.query.event_description+"')",function(err,results){
@@ -106,15 +100,47 @@ app.post("/createEvent",function (req,res){
 });
 
 
-// app.post("/register",function (req,res){
-//      connection.query("Insert into user(`name`,`email`,`pass`) "+
-//       "Values('"+ req.query.name+"','"+ req.query.email+"','"+ req.query.password+
-//       "')",function(err,results){
+var storage = multer.diskStorage({ //multers disk storage settings
+        destination: function (req, file, cb) {
+            cb(null, './src/images/');
+        },
+        filename: function (req, file, cb) {
+            var datetimestamp = Date.now();
+            cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
+            store=file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1];
+        }
+    });
+
+    var upload = multer({ //multer settings
+                    storage: storage
+                }).single('file');
+
+    /** API path that will upload the files */
+    app.post('/upload', function(req, res) {
+        upload(req,res,function(err){
+            if(err){
+                 res.json({error_code:1,err_desc:err});
+                 return;
+            }
+             res.json({error_code:0,err_desc:null});
+             console.log(req.body.event_id);
+             console.log(store);
+
+    connection.query("Insert into images(`event_id`,`image_path`)Values('"+ req.body.event_id+"','"+store+"')",function(err,results){
      
-//         res.send(results);
-//         console.log(err);
-//     });
-// });
+    //     res.send(results);
+        console.log(err);
+    });
+
+
+    connection.query("Update events SET `thumb` ='"+store+"' where `event_id` ='"+ req.body.event_id+"'",function(err,results){
+     
+    //     res.send(results);
+        console.log(err);
+    });
+        });
+    });
+
 
 
 app.get('/', function (req, res) {

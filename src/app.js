@@ -1,5 +1,5 @@
 //explora is the name of the website.
-var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch']);
+var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
  
 explora.config(['$routeProvider','$locationProvider',function($routeProvider){
 
@@ -20,19 +20,15 @@ explora.config(['$routeProvider','$locationProvider',function($routeProvider){
 		templateUrl: 'view.html',
         controller:'EventController'
 	})
-	.when('/login',{
-		templateUrl: 'login.html',
-        controller:'loginController'
-	})
 	.when('/create',{
 		templateUrl: 'create.html',
         controller:'formController'
 	})
-	.when('/register',{
-		templateUrl: 'register.html',
-        controller:'registerController'
-    })
-    .otherwise({ redirectTo: '/' });
+    .when('/upload/:event_id',{
+    	templateUrl:'upload.html',
+        controller:'uploadController'
+    });
+    //.otherwise({ redirectTo: '/' });
 
 }]);
 
