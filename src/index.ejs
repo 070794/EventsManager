@@ -11,9 +11,6 @@
 <body ng-controller="EventController as EC">
 
     <!-- the upper div which contain title,city and login buttons -->
-
-    <script> var data={{user}}; </script>
-
 	<div class="topbar">
 
 		<div class="up">
@@ -21,17 +18,16 @@
 
 	    	<div class="addons">
 
-	    		<!-- <a href='#login' id="login"  type="button">LOGIN</a>
-	    		<a href='#register' id="register"  type="button">SIGN UP</a> -->
-
-
+	    		<a href='#login' id="login"  type="button">LOGIN</a>
+	    		<a href='#register' id="register"  type="button">SIGN UP</a>
 	   			<a href='#create' id="create" type="button"> + Create</a> 
 	   		</div>
 		</div>
 
-        
-		<div class="Title">
-	 	<b> UPCOMING EVENTS</b>
+        <script> var data={{user}}; </script>
+		<div class="Title" ng-init="userId=<%= user %>">
+
+	 	<b> UPCOMING EVENTS {{sessionStorage.user}} {{req.user}} <%= user %> {{userId}} {{3+3}}</b>
 		</div>
 
 	</div>

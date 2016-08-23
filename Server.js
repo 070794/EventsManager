@@ -1,7 +1,24 @@
 var express = require('express'); 
+var session =require('express-session'); 
 var app = express(); 
 var mysql=require('mysql'); 
-var passport= require('passport'); 
+var passport= require('passport');
+var bodyParser=require('body-parser');
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.static('src'));
+app.set('views',__dirname + '/src');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+app.use(session({
+  secret: 'vidyapathaisalwaysrunning',
+  id:19,
+  resave: true,
+  saveUninitialized: true
+ } ));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 var connection = mysql.createConnection({
@@ -22,6 +39,11 @@ connection.connect(function(err) {
 });
 
 
+
+require('./src/config/passport')(passport,connection);
+require('./src/app/routes.js')(app, passport);
+
+
 app.get("/events",function (req,res){
     connection.query('SELECT * from events',function (err,results){
     res.send(results);
@@ -36,6 +58,7 @@ app.get("/images",function (req,res){
     });
 
 });
+
 
 
 app.get("/event_data",function (req,res){
@@ -66,12 +89,12 @@ app.get("/date",function (req,res){
 });
 
 
-app.get("/userlogin",function (req,res){
-       connection.query("SELECT name from user where email= '"+ req.query.username+"' and pass = '"+ req.query.password+"'" ,function (err,results){
+// app.get("/userlogin",function (req,res){
+//        connection.query("SELECT name from user where email= '"+ req.query.username+"' and pass = '"+ req.query.password+"'" ,function (err,results){
 
-       res.send(results);
-    });
-});
+//        res.send(results);
+//     });
+// });
 
 
 app.post("/createEvent",function (req,res){
@@ -83,19 +106,19 @@ app.post("/createEvent",function (req,res){
 });
 
 
-app.post("/register",function (req,res){
-     connection.query("Insert into user(`name`,`email`,`pass`) "+
-      "Values('"+ req.query.name+"','"+ req.query.email+"','"+ req.query.password+
-      "')",function(err,results){
+// app.post("/register",function (req,res){
+//      connection.query("Insert into user(`name`,`email`,`pass`) "+
+//       "Values('"+ req.query.name+"','"+ req.query.email+"','"+ req.query.password+
+//       "')",function(err,results){
      
-        res.send(results);
-        console.log(err);
-    });
-});
+//         res.send(results);
+//         console.log(err);
+//     });
+// });
 
-app.use(express.static('src'));
 
 app.get('/', function (req, res) {
+  console.log(req);
   res.sendFile(__dirname+"/"+"src/index.html");
 });
 

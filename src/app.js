@@ -36,6 +36,7 @@ explora.config(['$routeProvider','$locationProvider',function($routeProvider){
 
 }]);
 
+
  
 	
 

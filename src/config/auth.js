@@ -1,20 +1,15 @@
-var ids = {
-
-    'facebookAuth' : {
-        'clientID'      : '1183233678404875', // your App ID
-        'clientSecret'  : '5925e66f40560f3be73d482db73501de', // your App Secret
-        'callbackURL'   : 'http://localhost:3000/auth/facebook/callback'
-    },
-
+module.exports = 
+{
     'googleAuth' :{
-		'clientID'      : '1098422912996-crtcjucujqqg40p1hpsq10llilo0ppi5.apps.googleusercontent.com',
-		'client_secret' : 'Q4ZFRhLKzOZyHLB0CqQNewHE',
-		'callbackURL'   :  'http://localhost:3000/auth/google/callback'
+		'clientID'      : '1098422912996-72rbb52eb3m0in7e4ovlued0kkqocf2r.apps.googleusercontent.com',
+		'clientSecret' : 'XRAyLr1G1_XRoAxXLfIyj3_-',
+		'callbackURL'   :  'http://localhost:3000/auth/google/callback',
+        "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+        "token_uri":"https://accounts.google.com/o/oauth2/token",
+        "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret":"XRAyLr1G1_XRoAxXLfIyj3_-",
+        "redirect_uris":["http://localhost:3000/auth/google/callback"],
+        "javascript_origins":["http://localhost:3000"]
 	}
-   
 };    
-
-module.exports = ids;
-
-
 
