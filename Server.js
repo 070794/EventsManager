@@ -19,6 +19,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
  } ));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -40,8 +41,6 @@ connection.connect(function(err) {
 	}
 });
 
-
-
 require('./src/config/passport')(passport,connection);
 require('./src/app/routes.js')(app, passport);
 
@@ -50,8 +49,8 @@ app.get("/events",function (req,res){
     connection.query('SELECT * from events',function (err,results){
     res.send(results);
     });
-
 });
+
 
 app.get("/images",function (req,res){
       connection.query("SELECT image_path from images where event_id= '"+
@@ -59,7 +58,6 @@ app.get("/images",function (req,res){
       
           res.send(results);
     });
-
 });
 
 

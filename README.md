@@ -33,8 +33,8 @@ us manage and test the application.
 ```
 npm install 
 bower install
-```
 
+```
 If you clone this repo you would already have these present.
 
 ### Run the Application
@@ -43,9 +43,8 @@ We have preconfigured the project with a simple development web server.  The sim
 this server is:
 
 ```
-node app.js
+node Server.js
 ```
-
 Now browse to the app at `http://localhost:3000/`.
 
 

@@ -12,27 +12,22 @@
 	<div class="topbar">
 
 		<div class="up">
-	    	<div class="city"> <b>Bangalore </b></div>
+			<div class="logo"> <img src="./images/logo/logo2.png"></div>
+			<div class="city"> <b>Bangalore </b></div>
+			<div class="Title" ><b> UPCOMING EVENTS</b></div>
 
-	    	<div class="addons">
+			<div class="addons">
 
-                <% if(typeof user== 'undefined') { %>
-                   <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
-                   <a href='/auth/google' id="create" type="button"> + Create</a> 
+				<% if(typeof user== 'undefined') { %>
+					<a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+					<a href='/auth/google' id="create" type="button"> + Create</a> 
 
-                <% }else { %>
-                   <a href='/logout' id="create" type="button"> LOG OUT</a>
-                   <a href='/loggedin/#create' id="create" type="button"> + Create</a> 
-                 <% } %>
-
-	   			
-	   		</div>
-		</div>
-
-        <!-- <script> var data={{user}}; </script> -->
-		<div class="Title" >
-
-	 	<b> UPCOMING EVENTS</b>
+				<% }else { %>
+					<a href='/logout' id="create" type="button"> LOG OUT</a>
+					<a href='/loggedin/#create' id="create" type="button"> + Create</a> 
+				 <% } %>
+					
+				</div>
 		</div>
 
 	</div>
@@ -41,46 +36,39 @@
 	<div class="filter">
 
 		<div class="eventtype">
-		 <ul>
-	     	<button ng-click="typeclick('type',$event)" id="art" type="button">Arts & Culture </button>
-	     	<button ng-click="typeclick('type',$event)" id="entertainment" type="button">Entertainment</button>
-	     	<button ng-click="typeclick('type',$event)" id="sports" type="button">Sports & Fitness</button>
-	     	<button ng-click="typeclick('type',$event)" id="adventure" type="button">Adventure</button>
-	     	<button ng-click="typeclick('type',$event)" id="tech" type="button">Biz & Tech</button>
-	     	<button ng-click="typeclick('type',$event)" id="party" type="button">Parties & NightLife</button>
-	     <ul>
-	     </div>
+			<button ng-click="typeclick('type',$event)" id="art" type="button">Arts & Culture </button>
+			<button ng-click="typeclick('type',$event)" id="entertainment" type="button">Entertainment</button>
+			<button ng-click="typeclick('type',$event)" id="sports" type="button">Sports & Fitness</button>
+			<button ng-click="typeclick('type',$event)" id="adventure" type="button">Adventure</button>
+			<button ng-click="typeclick('type',$event)" id="tech" type="button">Biz & Tech</button>
+			<button ng-click="typeclick('type',$event)" id="party" type="button">Parties & NightLife</button>  
+		</div>
 
-    	<div class="date">
-    	<button ng-click="dateclick('datetime',$event)" id="today" type="button">Today</button>
-    	<button ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</button>
-    	<button ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</button>
-    	<button ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</button>
-
-    	</div>
-
-
+		<div class="date">
+			<button ng-click="dateclick('datetime',$event)" id="today" type="button">Today</button>
+			<button ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</button>
+			<button ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</button>
+			<button ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</button>
+		</div>
 
 	</div>
 
-   <div ng-view >
-
-   </div>
+   <div ng-view ></div>
 
 
    
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
-<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
-
-<script type="text/javascript"  src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.js"></script>
 <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script> -->
 
 <script  type="text/javascript" src="app.js"> </script>
+
 <script  type="text/javascript" src="factory/createFactory.js"> </script>
 <script  type="text/javascript" src="factory/dateFactory.js"> </script>
 <script  type="text/javascript" src="factory/eventFactory.js"> </script>
@@ -92,6 +80,7 @@
 <script  type="text/javascript" src="controller/imageController.js"> </script>
 <script  type="text/javascript" src="controller/formController.js"> </script>
 <script  type="text/javascript" src="controller/uploadController.js"> </script>
+
 <script  type="text/javascript" src="animate.js"> </script>
 
 
