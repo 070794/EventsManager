@@ -12,7 +12,7 @@
 	<div class="topbar">
 
 		<div class="up">
-			<div class="logo"> <img src="./images/logo/logo2.png"></div>
+			<div class="logo"><a href='/#/' ><img  src="./images/logo/logo2.png" ></div></a>
 			<div class="city"> <b>Bangalore </b></div>
 			<div class="Title" ><b> UPCOMING EVENTS</b></div>
 
@@ -23,8 +23,11 @@
 					<a href='/auth/google' id="create" type="button"> + Create</a> 
 
 				<% }else { %>
+				    <script>  var usr_id = <%= user.id %>;
+				    var usr_name ="<%= user.name %>";
+					</script>
 					<a href='/logout' id="create" type="button"> LOG OUT</a>
-					<a href='/loggedin/#create' id="create" type="button"> + Create</a> 
+					<a href='/#create' id="create" type="button"> + Create</a> 
 				 <% } %>
 					
 				</div>
@@ -53,7 +56,7 @@
 
 	</div>
 
-   <div ng-view ></div>
+ <div class="totalview" ng-view ></div>
 
 
    

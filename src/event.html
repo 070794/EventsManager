@@ -1,51 +1,58 @@
-<div style= "color:black" class="main" ng-controller="ImageController">
-	<div class="nameImage" >
-		<div  class="eventname">{{product.title}}</div>
+<div style= "color:black" class="main" style="height:100%" ng-controller="ImageController">
 
+		<div class="upperpart">
 
-		<div class="container slider" >
-		    <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-		         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-		         ng-hide="!isCurrentSlideIndex($index)" ng-src="images/{{slide.image_path}}" style="left: 0px;width: 800px;height: 400px;">
+			<div class="leftbar">
 
-		    <a class="arrow prev" ng-click="nextSlide()"></a>
-		    <a class="arrow next" ng-click="prevSlide()"></a>
-		    <nav class="nav">
-		        <div class="wrapper">
-		            <ul class="dots">
-		                <li class="dot" ng-repeat="slide in slides">
-		                    <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
-		                       ng-click="setCurrentSlideIndex($index);"></a></li>
-		            </ul>
-		        </div>
-		    </nav>
+				<div  class="eventname">{{product.title}}</div>
+
+				<div class="container slider" >
+							<img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+							ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+							ng-hide="!isCurrentSlideIndex($index)" ng-src="images/{{slide.image_path}}" style="left: 0px;width: 400px;height: 400px;">
+
+						<a class="arrow prev" ng-click="nextSlide()"></a>
+						<a class="arrow next" ng-click="prevSlide()"></a>
+							<nav class="nav">
+								<div class="wrapper">
+									<ul class="dots">
+										<li class="dot" ng-repeat="slide in slides">
+											<a ng-class="{'active':isCurrentSlideIndex($index)}"
+										ng-click="setCurrentSlideIndex($index);"></a></li>
+									</ul>
+								</div>
+							</nav>
+				</div>
+
+			</div>
+
+			<div class="rightbar">
+
+				<div class="datetime">
+				
+
+				
+			
+
+				Date: {{product.dt}}
+				</div>
+			    
+			    <div class="venue">
+				Venue: {{product.venue}}
+				</div>
+
+				<div class="author">
+				 Author: {{product.author}}
+				</div>
+
+				<div class="price">
+				Price: {{product.price}}
+				</div>
+
+			</div>
 		</div>
 
+		<div class="description"> Details: {{product.des}}
+		</div>
 
-		<!-- <div class="eventimages" ng-controller="ImageController"  ng-show="slides.length">
-          <div class="img-wrap">
-            <img ng-src="images/{{slides[current].image_path}}" />
-          </div>
-        </div> -->
-
-	
-	</div>
-
-	<div class="datetime">
-	Date: {{product.dt.replace('T', ' ').slice(0,19)}}
-	</div>
-    
-    <div class="venue">
-	Venue: {{product.venue}}
-	</div>
-
-	<div class="author">
-	 Author: {{product.author}}
-	</div>
-
-	<div class="price">
-	Price: {{product.price}}
-	</div>
-	<div class="description"> Details: {{product.des}}
-	</div>
 </div>

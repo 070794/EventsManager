@@ -8,21 +8,21 @@
 
       'event_venue':  $scope.event_venue,
       'event_type':  $scope.event_type,
-      'event_author': "sdfjhsjf",
+      'event_author': usr_name,
       'event_price':  $scope.event_price,
       'event_description':  $scope.event_description
 
     };
     $scope.getid;
-
-     console.log( $scope.data);
-     console.log($scope.event_time.toISOString().slice(12, 19));
-
+     console.log(usr_name);
+     // console.log( $scope.data);
+     // console.log($scope.event_time.toISOString().slice(12, 19));
+    
      createFactory.all( $scope.data).then(
           function(res){
-            $scope.getid = res.insertId;
-            console.log($scope.getid);
-            console.log("/loggedin/#upload" + "/"+$scope.getid);
+             $scope.getid = res.insertId;
+            // console.log($scope.getid);
+            // console.log("/#upload" + "/"+$scope.getid);
             $location.path( "upload" + "/"+$scope.getid);
 
             console.log("updated");

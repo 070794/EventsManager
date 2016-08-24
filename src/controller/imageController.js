@@ -53,6 +53,7 @@ var event=[];     // data of one single event
       eventFactory.all($routeParams.event_id).then(
       function(res){
         $scope.product = res[0];
+        $scope.product.dt=new Date($scope.product.dt.replace('T', ' ').slice(0,19)).toString().slice(0,24);
         console.log($scope.product);
         console.log("updated");
       },

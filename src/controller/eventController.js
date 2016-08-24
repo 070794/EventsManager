@@ -10,24 +10,42 @@ var events=[];
       $location.path( path + "/"+eventid);
       };
 
-      if($routeParams.type_id){
-        console.log($routeParams.type_id);
+      // //*************************************** new code**************************************
+      //  if($routeParams.type_id && $routeParams.date_id){
+
+      //  datetypeFactory.all($routeParams.type_id,$routeParams.date_id).then(
+      //     function(res){
+      //       $scope.products = res;
+      //       //console.log($scope.products);
+      //       console.log("updated");
+      //     },
+      //     function(err){
+      //       console.error(err);
+      //     });
+
+
+      //  }      
+
+      if($routeParams.type_id && !$routeParams.date_id){
+        //console.log($routeParams.type_id);
+
          typeFactory.all($routeParams.type_id).then(
           function(res){
             $scope.products = res;
-            console.log($scope.products);
+            //console.log($scope.products);
             console.log("updated");
           },
           function(err){
             console.error(err);
           });
        }
-       else if($routeParams.date_id){
-        console.log($routeParams.date_id);
+       else if($routeParams.date_id && !$routeParams.type_id){
+        //console.log($routeParams.date_id);
+
          dateFactory.all($routeParams.date_id).then(
           function(res){
             $scope.products = res;
-            console.log($scope.products);
+           // console.log($scope.products);
             console.log("updated");
           },
           function(err){

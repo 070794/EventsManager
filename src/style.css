@@ -9,7 +9,7 @@ body{
 
 .up{
 	/*background-color:pink;*/
-    height: 70px;
+    height: 50px;
     width: 100%;
 }
 
@@ -37,22 +37,8 @@ body{
     float:right;
 }
 
-.title{
-
-}
-  
 
 
-
-#login{
-	background-color:white;
-	text-align: center;
-	color: black;
-    padding: 5px 3px;
-    text-decoration: none;
-    display: inline-block;
-    
-}
 
 #create{
 	background-color:blue;
@@ -70,8 +56,6 @@ body{
 	color:grey;
 	font-size:30px;
 	font-family: sans-serif;
-
-
 }
 
 
@@ -113,19 +97,15 @@ body{
 }
 
 
-
-
-
-
-
 .slider {
-    width: 800px;
+    width: 400px;
     height: 400px;
     overflow: hidden;
     position: relative;
     background: #e6e6e6;
     border: 20px solid #FFF;
     margin-top: 20px;
+    float: left;
 }
 
 .slide {
@@ -244,7 +224,7 @@ NAV
 }
 
 /*------------------------------------- */
-.login{
+/*.login{
     background-color:white;
 }
 #login_username{
@@ -278,17 +258,25 @@ NAV
   width: 150px;
   height: 50px;
 }
+*/
+
+.totalview{
+  height:100%;
+/* align:center;
+ margin-left:40px;
+ margin-right:40px;*/
+}
 
 .total{
   height:370px;
   width:250px;
   float:left;
-    background-color:white;
-
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  background-color:white;
+  /*align:center;*/
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .datadata{
@@ -403,6 +391,39 @@ font-weight: 400;
   transform: translateX(0px);
   -webkit-transform: translateX(0px);
 }
+
+.sidebarr{
+  /*float:left;*/
+  background-color: white;
+  /*width:10%;
+  height:150px;*/
+  border-color: black;
+  border-width: 5px ;
+  border-style: solid;
+  text-align:center;
+      position: absolute;
+    left: 0px;
+    top: 661px;
+    margin: 0 0 10px;
+
+}
+.abc{
+  width:100%;
+  /*float:left;*/
+}
+
+.description{
+  background-color: white;
+      margin: 0 0 10px;
+  text-align:left;
+  border-color: red;
+  border-width: 5px ;
+  border-style: solid;
+      clear: both;
+
+}
+
+
 
 
 

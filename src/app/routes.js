@@ -6,7 +6,15 @@ module.exports = function(app, passport) {
     // });
 
     // route for showing the profile page
-    app.get('/loggedIn', isLoggedIn, function(req, res) {
+    // app.get('/home', isLoggedIn, function(req, res) {
+    //     console.log(req);
+    //     console.log(req.user);
+    //     res.render('index.ejs', {
+    //         user : req.user // get the user out of session and pass to template
+    //     });
+    // });
+
+    app.get('/', isLoggedIn, function(req, res) {
         console.log(req);
         console.log(req.user);
         res.render('index.ejs', {
@@ -34,8 +42,8 @@ module.exports = function(app, passport) {
     // the callback after google has authenticated the user
     app.get('/auth/google/callback',
             passport.authenticate('google', {
-                    successRedirect : '/loggedIn',
-                    failureRedirect : 'https://www.google.com',
+                    successRedirect : '/',
+                    failureRedirect : '/',
                     session:true
             }));
 
@@ -49,6 +57,6 @@ function isLoggedIn(req, res, next) {
         return next();
 
     // if they aren't redirect them to the home page
-    res.redirect('/');
+    res.render('index.ejs');
 }
 

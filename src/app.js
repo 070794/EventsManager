@@ -27,8 +27,20 @@ explora.config(['$routeProvider','$locationProvider',function($routeProvider){
     .when('/upload/:event_id',{
     	templateUrl:'upload.html',
         controller:'uploadController'
-    });
-    //.otherwise({ redirectTo: '/' });
+    })
+    //*********************** new code ***********************************
+    
+    // .when('/type/:type_id/datetime/:date_id',{
+    // 	templateUrl:'view.html',
+    //     controller:'EventController'
+    // })
+    //  .when('/datetime/:date_id/type/:type_id',{
+    // 	templateUrl:'view.html',
+    //     controller:'EventController'
+    // });
+
+     //*********************** new code ***********************************
+    .otherwise({ redirectTo: '/' });
 
 }]);
 

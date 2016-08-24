@@ -90,8 +90,17 @@ app.get("/date",function (req,res){
     });
 
 });
+ //**********************************************new code************************************
+// app.get("/datetype",function (req,res){
+     
+//        connection.query("SELECT * from events where type = '"+ 
+//         req.query.type+"' and dt >= '"+ req.query.date1 + "' and dt <= '"+ req.query.date2+"'" ,function (err,results){
+//          res.send(results);
 
+//     });
 
+// });
+ //**********************************************new code************************************
 
 app.post("/createEvent",function (req,res){
      connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`) "+
@@ -150,10 +159,10 @@ var storage = multer.diskStorage({ //multers disk storage settings
 
 
 
-app.get('/', function (req, res) {
-  console.log(req);
-  res.render("index.ejs");
-});
+// app.get('/', function (req, res) {
+//   console.log(req);
+//   res.render("index.ejs");
+// });
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

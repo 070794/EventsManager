@@ -57,7 +57,7 @@
 					// when the response is available
 						console.log("success");
 						d.resolve(response.data);
-						console.log(response.data);
+						//console.log(response.data);
 						
 
 						},function errorCallback(response) {
