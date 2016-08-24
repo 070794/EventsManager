@@ -47,7 +47,7 @@ passport.deserializeUser(function(user, done) {
 
                 // if there is no user with that email
                 // create the user
-                var newUserMysql = new Object();
+                newUserMysql = new Object();
                 
                 newUserMysql.email    = profile.emails[0].value;
                 //newUserMysql.password = password; // use the generateHash function in our user model
