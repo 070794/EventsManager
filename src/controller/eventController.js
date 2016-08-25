@@ -7,6 +7,7 @@ var events=[];
         //console.log(eventid);
         $location.path( path + "/"+eventid);
       };
+
       if($routeParams.type_id && !$routeParams.date_id){
         //console.log($routeParams.type_id);
 

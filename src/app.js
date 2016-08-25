@@ -12,7 +12,7 @@ explora.config(['$routeProvider',function($routeProvider){
 	})
 	.when('/type/:type_id',{
 		templateUrl: 'view.html',
-        controller:'EventController',
+        controller:'EventController'
 	})
 	.when('/datetime/:date_id',{
 		templateUrl: 'view.html',
@@ -26,19 +26,11 @@ explora.config(['$routeProvider',function($routeProvider){
     	templateUrl:'upload.html',
         controller:'uploadController'
     })
-    //*********************** new code ***********************************
-    
-    // .when('/type/:type_id/datetime/:date_id',{
-    // 	templateUrl:'view.html',
-    //     controller:'EventController'
-    // })
-    //  .when('/datetime/:date_id/type/:type_id',{
-    // 	templateUrl:'view.html',
-    //     controller:'EventController'
-    // });
-
-     //*********************** new code ***********************************
-    .otherwise({ redirectTo: '/' });
+    .when('/profile',{
+        templateUrl:'view.html',
+        controller:'profileController'
+    })
+   .otherwise({ redirectTo: '/' });
 
 }]);
 
