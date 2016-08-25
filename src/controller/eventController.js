@@ -1,5 +1,6 @@
 var events=[];
-  
+  var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
+ 
   explora.controller("EventController", function($scope,$location,$http,
     $routeParams,resultsFactory,typeFactory,dateFactory){
 

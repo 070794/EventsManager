@@ -1,3 +1,5 @@
+var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
+ 
 var images=[];    // array of all inages
 var event=[];     // data of one single event
  explora.controller("ImageController",function($scope,$routeParams,imageFactory,eventFactory){

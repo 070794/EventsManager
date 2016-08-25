@@ -1,3 +1,5 @@
+var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
+ 
 explora.controller('uploadController',['$scope','Upload','$window','$routeParams',function($scope,Upload,$window,$routeParams){
     //var $scope = this;
     $scope.submit = function(){ //function to call on form submit
