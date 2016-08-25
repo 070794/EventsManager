@@ -1,15 +1,18 @@
 <div style= "color:black" class="main" style="height:100%" ng-controller="ImageController">
 
-		<div class="upperpart">
+    <div class="upperpart">
 
 			<div class="leftbar">
 
-				<div  class="eventname">{{product.title}}</div>
+				<div  class="eventname">
+				<span> <img src="./images/assets/event.png"></span>
+				<span class="event">  {{product.title}} </span>
+				</div>
 
 				<div class="container slider" >
 							<img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
 							ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-							ng-hide="!isCurrentSlideIndex($index)" ng-src="images/{{slide.image_path}}" style="left: 0px;width: 400px;height: 400px;">
+							ng-hide="!isCurrentSlideIndex($index)" ng-src="images/{{slide.image_path}}" >
 
 						<a class="arrow prev" ng-click="nextSlide()"></a>
 						<a class="arrow next" ng-click="prevSlide()"></a>
@@ -29,30 +32,35 @@
 			<div class="rightbar">
 
 				<div class="datetime">
-				
-
-				
-			
-
-				Date: {{product.dt}}
+	            <span> <img src="./images/assets/calender.png"></span>
+				<span class="date_time">  {{product.dt}} </span>
 				</div>
 			    
 			    <div class="venue">
-				Venue: {{product.venue}}
-				</div>
-
-				<div class="author">
-				 Author: {{product.author}}
+			    <span> <img src="./images/assets/location.png"></span>
+				<span class="venue">  {{product.venue}} </span>
 				</div>
 
 				<div class="price">
-				Price: {{product.price}}
+				<span> <img src="./images/assets/price.png"></span>
+				<span class="price">  {{product.price}} </span>
 				</div>
 
 			</div>
-		</div>
+            
+            <div class="rightbar_below">
+				<div class="author">
+					<span> <img src="./images/assets/author.png"></span>
+					<span class="author">  {{product.author}} </span>
+			    </div>
+		    </div>
 
-		<div class="description"> Details: {{product.des}}
+
+	</div>
+
+		<div class="description"> 
+		<span class="heading" > DETAILS </span>
+		<p>{{product.des}}</p>
 		</div>
 
 </div>

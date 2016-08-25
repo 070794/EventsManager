@@ -3,7 +3,7 @@
 <title>Events Manager</title>
 <base href="/">
 <link type="text/css" rel=stylesheet href=style.css />
-
+<link type="text/css" rel=stylesheet href=CSSfile/main.css /> 
 
 </head>
 <body ng-controller="EventController">
@@ -11,8 +11,8 @@
     <!-- the upper div which contain title,city and login buttons -->
 	<div class="topbar">
 
-		<div class="up">
-			<div class="logo"><a href='/#/' ><img  src="./images/logo/logo2.png" ></div></a>
+		
+			<div class="logo"><a href='/#/' ><img  src="./images/logo/logo2.png" ></a></div>
 			<!-- <div class="city"> <b>Bangalore </b></div> -->
 			<!-- <div class="Title" ><b> UPCOMING EVENTS</b></div> -->
 
@@ -31,7 +31,8 @@
 				 <% } %>
 					
 			</div>
-		</div>
+
+	
 
 	</div>
 
@@ -50,16 +51,7 @@
 			<button ng-click="typeclick('type',$event)" id="tech" type="button">Biz & Tech</button>
 			<button ng-click="typeclick('type',$event)" id="party" type="button">Parties & NightLife</button>  
 		</div>
-		<!-- <div id="tabs" style="display:inline-block;">
-  <ul>
-    <li ng-click="typeclick('type',$event)" id="art"><span>Arts & Culture </span></li>
-    <li ng-click="typeclick('type',$event)" id="entertainment"><span>Entertainment</span></li>
-    <li ng-click="typeclick('type',$event)" id="sports"><span>Sports & Fitness</span></li>
-    <li ng-click="typeclick('type',$event)" id="adventure"><span>Adventure</span></li>
-    <li ng-click="typeclick('type',$event)" id="tech"><span>Biz & Tech</span></li>
-    <li ng-click="typeclick('type',$event)" id="party"><span>Parties & NightLife</span></li>
-  </ul>
-</div> -->
+		
 
 		<div class="date">
 			<button ng-click="dateclick('datetime',$event)" id="today" type="button">Today</button>
