@@ -18,7 +18,7 @@ app.use(session({
   id:19,
   resave: true,
   saveUninitialized: true
- } ));
+ }));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -90,6 +90,8 @@ app.get("/date",function (req,res){
     });
 
 });
+
+
  //**********************************************new code************************************
 // app.get("/datetype",function (req,res){
      
@@ -143,7 +145,7 @@ var storage = multer.diskStorage({ //multers disk storage settings
     connection.query("Insert into images(`event_id`,`image_path`)Values('"+ 
       req.body.event_id+"','"+store+"')",function(err,results){
      
-    //     res.send(results);
+        console.log(results);
         console.log(err);
     });
 
@@ -151,7 +153,7 @@ var storage = multer.diskStorage({ //multers disk storage settings
     connection.query("Update events SET `thumb` ='"+store+"' where `event_id` ='"+ 
       req.body.event_id+"'",function(err,results){
      
-    //     res.send(results);
+   console.log(results);
         console.log(err);
     });
         });

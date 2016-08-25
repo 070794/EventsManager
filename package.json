@@ -4,11 +4,11 @@
   "description": "shows the list of upcoming events",
   "main": "app.js",
   "scripts": {
-    
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/070794/EventsManager"
+    "url": "git+https://github.com/070794/EventsManager.git"
   },
   "author": "070794",
   "license": "ISC",
@@ -39,5 +39,6 @@
     "passport-google-oauth2": "0.1.6",
     "passport-http-bearer": "1.0.1",
     "passport-local": "1.0.0"
-  }
+  },
+  "devDependencies": {}
 }
