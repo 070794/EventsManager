@@ -1,5 +1,4 @@
 
-var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
 
   explora.controller("formController",function($scope, $location,createFactory){
    

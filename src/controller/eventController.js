@@ -1,32 +1,12 @@
 var events=[];
-  var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
- 
-  explora.controller("EventController", function($scope,$location,$http,
-    $routeParams,resultsFactory,typeFactory,dateFactory){
-
+  explora.controller("EventController",function($scope, $location, $http,
+    $routeParams, resultsFactory, typeFactory, dateFactory){
       $scope.products=events;
 
       $scope.go = function (path ,eventid) {
-      //console.log(eventid);
-      $location.path( path + "/"+eventid);
+        //console.log(eventid);
+        $location.path( path + "/"+eventid);
       };
-
-      // //*************************************** new code**************************************
-      //  if($routeParams.type_id && $routeParams.date_id){
-
-      //  datetypeFactory.all($routeParams.type_id,$routeParams.date_id).then(
-      //     function(res){
-      //       $scope.products = res;
-      //       //console.log($scope.products);
-      //       console.log("updated");
-      //     },
-      //     function(err){
-      //       console.error(err);
-      //     });
-
-
-      //  }      
-
       if($routeParams.type_id && !$routeParams.date_id){
         //console.log($routeParams.type_id);
 
@@ -62,15 +42,14 @@ var events=[];
         },
         function(err){
           console.error(err);
-        }
-        );
+        });
        }
 
-      $scope.typeclick= function(path,$event){	
+      $scope.typeclick= function(path,$event){  
          $location.path( path + "/"+$event.target.id);
        };
 
       $scope.dateclick= function(path,$event){
-          $location.path( path + "/"+$event.target.id);
-         };
+        $location.path( path + "/"+$event.target.id);
+       };
   }); 

@@ -1,8 +1,6 @@
 //explora is the name of the website.
-var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
- 
-explora.config(['$routeProvider','$locationProvider',function($routeProvider){
-
+var explora=angular.module("EventsManager", ['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
+explora.config(['$routeProvider',function($routeProvider){
 	$routeProvider.
 	when('/',{
 		templateUrl: 'view.html',
@@ -14,7 +12,7 @@ explora.config(['$routeProvider','$locationProvider',function($routeProvider){
 	})
 	.when('/type/:type_id',{
 		templateUrl: 'view.html',
-        controller:'EventController'
+        controller:'EventController',
 	})
 	.when('/datetime/:date_id',{
 		templateUrl: 'view.html',

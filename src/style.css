@@ -7,34 +7,63 @@ body{
 
 }
 
+/* upper class */
+
 .up{
 	/*background-color:pink;*/
-    height: 50px;
+    height: 40px;
     width: 100%;
 }
 
-.logo{
+.logo img{
   float:left;
-  width: 20px;
-  height:20px;
+  
+  height: 40px;
   padding-left: 2px;
   padding-right: 2px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-
 
 }
-.city{
+
+
+.googlebtn img{
+  height:35px;
+}
+
+.hvr-back-pulse-href:link, .hvr-back-pulse-href:visited {
+    display: table;
+    background-color: #4285f4;
+    color: white;
+    padding: 3.5px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-style: ;
+    height: 10px;
+    margin-top: 4px;
+    border: 2px solid;
+    border-color: black;
+    font-weight: bolder;
+    font-variant: inherit;
+    margin-right: 5px;
+}
+
+
+
+.hvr-back-pulse-href:hover, .hvr-back-pulse-href:active {
+    background-color: red;
+}
+/*.city{
 	color:red;
 	font-family:Arial;
 	font-size:16px;
 	float:right;
    
-}
+}*/
 
 .addons{
     border: none;
     float:right;
+    display: inline-flex;
+   
 }
 
 
@@ -50,14 +79,56 @@ body{
     
 }
 
-.title{
+/*.title{
 	text-align: center;
 	text-decoration-color: green;
 	color:grey;
 	font-size:30px;
 	font-family: sans-serif;
+}*/
+/* Back Pulse */
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
 }
 
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+
+.hvr-back-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: #2098d1;
+  background-color: #2098d1;
+  color: white;
+}
 
 
 .eventtype{
@@ -223,45 +294,22 @@ NAV
     background-color: transparent;
 }
 
-/*------------------------------------- */
-/*.login{
-    background-color:white;
-}
-#login_username{
-  border-color: #FFCC00;
-  border-width: 4px;
-  border-radius: 4px;
-  width: 200px;
-  height: 30px;
-  margin-left: 20px;
-}
 
-#login_password{
-  border-color: #FFCC00;
-  border-width: 4px;
-  border-radius: 4px;
-  width: 200px;
-  height: 30px;
-  margin-left: 20px;
-}
 
-#loginButton{
-  border-color: #FFCC00;
-  border-width: 4px;
-  background-color: #FFCC00;
-  margin-left: 150px;
-  border-radius: 4px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  color: white;
-  width: 150px;
-  height: 50px;
+
+.xy{
+ /* position:scroll;*/
+  background-image:url("http://i.stack.imgur.com/p9mUO.jpg");
+  background-attachment: fixed;
+  background-repeat:repeat;
 }
-*/
 
 .totalview{
   height:100%;
+  /*position:scroll;
+  background-image:url("http://i.stack.imgur.com/p9mUO.jpg");
+  background-attachment: scroll;
+  background-repeat:repeat;*/
 /* align:center;
  margin-left:40px;
  margin-right:40px;*/
@@ -277,6 +325,11 @@ NAV
   margin-right: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-style: inset;
+/*   position:scroll;
+  background-image:url("http://i.stack.imgur.com/p9mUO.jpg");
+  background-attachment: scroll;
+  background-repeat:repeat;*/
 }
 
 .datadata{
@@ -422,9 +475,36 @@ font-weight: 400;
       clear: both;
 
 }
+/*.bg-overlay{
+  width: 100%;
+    height: 50%;
+    padding: 10px;
+    border-color: white;
+    border-style: solid;
+    margin-bottom: 20px;
+}*/
 
 
+/*.banner-content{
+      position: absolute;
+    top: 30%;
+    z-index: 2;
+    min-width: 90%;
+    color: #fff;
+    font-weight: 100;
+}
 
+.user-message {
+    width: 75%;
+    padding: 0;
+}
+
+.col-xs-4 .col-sm-4 .col-md-4 .text-center{
+      position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;*/
+}
 
 
 

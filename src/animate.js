@@ -1,6 +1,4 @@
-var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
- 
-explora.animation('.slide-animation', function () {
+ explora.animation('.slide-animation', function () {
         return {
             beforeAddClass: function (element, className, done) {
                 var scope = element.scope();

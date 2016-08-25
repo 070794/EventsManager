@@ -1,4 +1,4 @@
-<html ng-app="EventsManager" >
+<html ng-app="EventsManager">
 <head> 
 <title>Events Manager</title>
 <base href="/">
@@ -6,34 +6,38 @@
 
 
 </head>
-<body ng-controller="EventController as EC">
+<body ng-controller="EventController">
 
     <!-- the upper div which contain title,city and login buttons -->
 	<div class="topbar">
 
 		<div class="up">
 			<div class="logo"><a href='/#/' ><img  src="./images/logo/logo2.png" ></div></a>
-			<div class="city"> <b>Bangalore </b></div>
-			<div class="Title" ><b> UPCOMING EVENTS</b></div>
+			<!-- <div class="city"> <b>Bangalore </b></div> -->
+			<!-- <div class="Title" ><b> UPCOMING EVENTS</b></div> -->
 
 			<div class="addons">
 
 				<% if(typeof user== 'undefined') { %>
-					<a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
-					<a href='/auth/google' id="create" type="button"> + Create</a> 
-
+					<a href="/auth/google" class="btn btn-danger googlebtn"><span class="fa fa-google-plus"></span> <img  src="loginImage.png"></a>
+					<a href='/auth/google' class="hvr-back-pulse-href" type="button"> + Create</a> 
 				<% }else { %>
 				    <script>  var usr_id = <%= user.id %>;
 				    var usr_name ="<%= user.name %>";
 					</script>
-					<a href='/logout' id="create" type="button"> LOG OUT</a>
-					<a href='/#create' id="create" type="button"> + Create</a> 
+					<!-- user profile -->
+					<a href='/logout' class="hvr-back-pulse-href" type="button"> LOG OUT</a>
+					<a href='/#create' class="hvr-back-pulse-href" type="button"> + Create</a> 
 				 <% } %>
 					
-				</div>
+			</div>
 		</div>
 
 	</div>
+
+
+
+	
 
 	 <!-- in this div the types of events filer is added -->
 	<div class="filter">
@@ -46,6 +50,16 @@
 			<button ng-click="typeclick('type',$event)" id="tech" type="button">Biz & Tech</button>
 			<button ng-click="typeclick('type',$event)" id="party" type="button">Parties & NightLife</button>  
 		</div>
+		<!-- <div id="tabs" style="display:inline-block;">
+  <ul>
+    <li ng-click="typeclick('type',$event)" id="art"><span>Arts & Culture </span></li>
+    <li ng-click="typeclick('type',$event)" id="entertainment"><span>Entertainment</span></li>
+    <li ng-click="typeclick('type',$event)" id="sports"><span>Sports & Fitness</span></li>
+    <li ng-click="typeclick('type',$event)" id="adventure"><span>Adventure</span></li>
+    <li ng-click="typeclick('type',$event)" id="tech"><span>Biz & Tech</span></li>
+    <li ng-click="typeclick('type',$event)" id="party"><span>Parties & NightLife</span></li>
+  </ul>
+</div> -->
 
 		<div class="date">
 			<button ng-click="dateclick('datetime',$event)" id="today" type="button">Today</button>
@@ -56,19 +70,21 @@
 
 	</div>
 
- <div class="totalview" ng-view ></div>
+
+
+ <div class="totalview" ng-view  ></div>
 
 
    
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+ <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>  -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.js"></script>
-<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script> -->
+
 
 <script  type="text/javascript" src="app.js"> </script>
 

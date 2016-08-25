@@ -1,4 +1,3 @@
-var explora=angular.module("EventsManager",['ngRoute','ngAnimate','ngTouch','ngFileUpload']);
  
     explora.factory('eventFactory', function($http, $q) { 
       var results = {};  
