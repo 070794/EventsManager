@@ -26,7 +26,16 @@
 				    var usr_name ="<%= user.name %>";
 					</script>
 					<!-- user profile -->
-					<a href='/logout' class="hvr-back-pulse-href" type="button"> LOG OUT</a>
+
+					<div class="dropdown">
+						  <button class="dropbtn">Hi <%= user.name %></button>
+						  <div class="dropdown-content">
+						    <a href="/myEvents">My Events</a>
+						    <a href="/logout">Logout</a>
+						  </div>
+					</div>
+					
+					<!-- <a href='/logout' class="hvr-back-pulse-href" type="button"> LOG OUT</a> -->
 					<a href='/#create' class="hvr-back-pulse-href" type="button"> + Create</a> 
 				 <% } %>
 					
