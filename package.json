@@ -4,7 +4,7 @@
   "description": "shows the list of upcoming events",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node Server.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "express": "4.14.0",
     "express-session": "1.14.0",
     "gulp": "3.9.1",
-    "mongoose": "4.5.9",
+    "karma": "1.2.0",
     "morgan": "1.7.0",
     "multer": "1.2.0",
     "mysql": "2.11.1",
@@ -40,5 +40,7 @@
     "passport-http-bearer": "1.0.1",
     "passport-local": "1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+
+  }
 }
