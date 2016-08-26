@@ -21,6 +21,12 @@
 
 .logo img {
   float: left;
-  height: 40px;
+  height: 50px;
   padding-left: 2px;
   padding-right: 2px; }
+
+.image img {
+  height: 35px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px; }

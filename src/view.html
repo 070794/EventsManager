@@ -1,3 +1,15 @@
+
+<div class="banner" >
+				<div class="overlay "></div>
+				<div class="content">
+					<h2 style="margin-bottom:5px;">Things To Do In Bengaluru &amp; Beyond</h2> 
+					<div style="font-size:20px; color:#fff;">Events&#8203;, Activities &#8203;&amp;    &#8203; Experiences  
+					</div>
+
+											
+				</div>
+	</div><br> <hr>
+
 <div class="total"  ng-controller="EventController" 
       ng-repeat="event in products" id={{event.event_id}} 
        ng-click="go('events',event.event_id)">
@@ -8,12 +20,26 @@
 			<div class="title overtext"> {{event.title}} </div>
 	 	</div>
 	</div>
+
     <div class="datadata">
-		<div class=" belowtext"> Venue: {{event.venue}} </div>
-	    <div class=" belowtext"> 
-	        Date: {{event.dt.replace('T', ' ').slice(0,10)}} 
+
+		<div class=" belowtext venue"> 
+
+	         <span> <img src="./images/assets/location.png"></span>
+			<span class="date_time">  {{event.venue}} </span>
+
+		</div>
+
+	    <div class=" belowtext datetime"> 
+           
+            <span> <img src="./images/assets/calender.png"></span>
+			<span class="date_time"> 
+			 {{event.dt.replace('T', ' ').slice(0,10)}}
+			 </span>
+
 	    </div>
-	</div>  
+	</div> 
+
 </div>  
 
     <p class="message" ng-show="!products.length">NO EVENT FOUND!!</p>

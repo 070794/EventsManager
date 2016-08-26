@@ -15,8 +15,10 @@
       'event_description':  $scope.event_description
 
     };
+
     $scope.getid;
-     console.log(usr_name);
+    
+     // console.log(usr_name);
      // console.log( $scope.data);
      // console.log($scope.event_time.toISOString().slice(12, 19));
     

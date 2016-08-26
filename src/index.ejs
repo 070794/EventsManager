@@ -3,6 +3,7 @@
 <title>Events Manager</title>
 <base href="/">
 <link type="text/css" rel=stylesheet href=style.css />
+<link type="text/css" rel=stylesheet href=style1.css />
 <link type="text/css" rel=stylesheet href=CSSfile/main.css /> 
 
 </head>
@@ -11,10 +12,7 @@
     <!-- the upper div which contain title,city and login buttons -->
 	<div class="topbar">
 
-		
 			<div class="logo"><a href='/#/' ><img  src="./images/logo/logo2.png" ></a></div>
-			<!-- <div class="city"> <b>Bangalore </b></div> -->
-			<!-- <div class="Title" ><b> UPCOMING EVENTS</b></div> -->
 
 			<div class="addons">
 
@@ -54,19 +52,20 @@
 
 		<div class="eventtype">
 
-          <ul>
+          <ul id="typeList">
 			<li ng-click="typeclick('type',$event)" id="art" >Arts & Culture </li>
 			<li ng-click="typeclick('type',$event)" id="entertainment" >Entertainment</li>
 			<li ng-click="typeclick('type',$event)" id="sports" >Sports & Fitness</li>
 			<li ng-click="typeclick('type',$event)" id="adventure" >Adventure</li>
 			<li ng-click="typeclick('type',$event)" id="tech" >Biz & Tech</li>
 			<li ng-click="typeclick('type',$event)" id="party" >Parties & NightLife</li> 
+			<li ng-click="typeclick('type',$event)" id="health" >Health</li> 
 		  </ul>
 		  	 
 	</div>
-	
+
 		<div class="date">
-		     <ul>
+		     <ul id="datelist">
 				<li ng-click="dateclick('datetime',$event)" id="today" type="button">Today</li>
 				<li ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</li>
 				<li ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</li>
@@ -76,9 +75,11 @@
 
 	</div>
 
+	
 
 
  <div class="totalview" ng-view  ></div>
+
 
     
    

@@ -3,6 +3,10 @@ var explora=angular.module("EventsManager", ['ngRoute','ngAnimate','ngTouch','ng
 explora.config(['$routeProvider',function($routeProvider){
 	$routeProvider.
 	when('/',{
+		templateUrl: 'home.html',
+		controller : 'EventController'
+	})
+	.when('/all',{
 		templateUrl: 'view.html',
 		controller : 'EventController'
 	})

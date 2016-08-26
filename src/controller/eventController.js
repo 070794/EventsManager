@@ -14,6 +14,7 @@ var events=[];
          typeFactory.all($routeParams.type_id).then(
           function(res){
             $scope.products = res;
+            // new Date('2018-08-08').toString().slice(0,15)
             //console.log($scope.products);
             console.log("updated");
           },

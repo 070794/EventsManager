@@ -47,25 +47,33 @@
 				<span class="priceVal">  {{product.price}} </span>
 				</div>
 
+				<div class="middlebar">
+	              <a href='/#create'> REGISTER </a> 
+				</div>
+
 			</div>
+
+			
             
             <div class="rightbar_below">
-				<div class="author">
-					<span> <img src="./images/assets/author.png"></span>
-					<span class="authorName">  {{product.author}} </span>
 
-					<div class="contact" style="float:right;"> 
-					<span> <img src="./images/assets/email.png"></span>
-					<span class="contactEmail"> Email:  {{product.email}}  </span> 
+				    <div class="author">
+						<span> <img src="./images/assets/author.png"></span>
+						<span class="authorName">  {{product.author}} </span>
 					</div>
-			    </div>
+
+					<div class="contact"> 
+						<span> <img src="./images/assets/email.png"></span>
+						<span class="contactEmail"> <a href="mailto:{{product.email}}" style="background-color:white">  {{product.email}} </a> </span> 
+					</div>
+			    
 		    </div>
 
 
 	</div>
 
 		<div class="description"> 
-		<span class="heading" > DETAILS </span>
+		<span class="heading" > DESCRIPTION</span>
 		<p>{{product.des}}</p>
 		</div>
 
