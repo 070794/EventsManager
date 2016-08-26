@@ -26,7 +26,7 @@
 				    var usr_name ="<%= user.name %>";
 					</script>
 					<!-- user profile -->
-
+                    <div class="image" ><span> <img src="./images/assets/author.png"></span></div>
 					<div class="dropdown">
 						  <button class="dropbtn">Hi <%= user.name %></button>
 						  <div class="dropdown-content">
@@ -53,20 +53,25 @@
 	<div class="filter">
 
 		<div class="eventtype">
-			<button ng-click="typeclick('type',$event)" id="art" type="button">Arts & Culture </button>
-			<button ng-click="typeclick('type',$event)" id="entertainment" type="button">Entertainment</button>
-			<button ng-click="typeclick('type',$event)" id="sports" type="button">Sports & Fitness</button>
-			<button ng-click="typeclick('type',$event)" id="adventure" type="button">Adventure</button>
-			<button ng-click="typeclick('type',$event)" id="tech" type="button">Biz & Tech</button>
-			<button ng-click="typeclick('type',$event)" id="party" type="button">Parties & NightLife</button>  
-		</div>
-		
 
+          <ul>
+			<li ng-click="typeclick('type',$event)" id="art" >Arts & Culture </li>
+			<li ng-click="typeclick('type',$event)" id="entertainment" >Entertainment</li>
+			<li ng-click="typeclick('type',$event)" id="sports" >Sports & Fitness</li>
+			<li ng-click="typeclick('type',$event)" id="adventure" >Adventure</li>
+			<li ng-click="typeclick('type',$event)" id="tech" >Biz & Tech</li>
+			<li ng-click="typeclick('type',$event)" id="party" >Parties & NightLife</li> 
+		  </ul>
+		  	 
+	</div>
+	
 		<div class="date">
-			<button ng-click="dateclick('datetime',$event)" id="today" type="button">Today</button>
-			<button ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</button>
-			<button ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</button>
-			<button ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</button>
+		     <ul>
+				<li ng-click="dateclick('datetime',$event)" id="today" type="button">Today</li>
+				<li ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</li>
+				<li ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</li>
+				<li ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</li>
+			</ul>
 		</div>
 
 	</div>
@@ -75,7 +80,7 @@
 
  <div class="totalview" ng-view  ></div>
 
-
+    
    
  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>  -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>

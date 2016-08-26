@@ -3,7 +3,7 @@
   explora.controller("formController",function($scope, $location,createFactory){
    
     $scope.event_type="art";
-     $scope.myFunc=function(){
+     $scope.getData=function(){
       $scope.data={
       'event_title':  $scope.event_title,
       'event_date':  $scope.event_date.toISOString().slice(0, 10)+" "+ $scope.event_time.toISOString().slice(12, 19),

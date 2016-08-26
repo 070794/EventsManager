@@ -6,15 +6,15 @@
   text-align: center;
   text-decoration: none;
   height: 10px;
-  margin-top: 4px;
-  border: 2px solid;
-  border-color: black;
+  margin-top: 2.60px;
+  border: 3px solid #4285f4;
   font-weight: bolder;
   font-variant: inherit;
   margin-right: 5px; }
 
 .hvr-back-pulse-href:hover, .hvr-back-pulse-href:active {
-  background-color: red; }
+  background-color: red;
+  border: 3px solid red; }
 
 .googlebtn img {
   height: 35px; }

@@ -35,15 +35,16 @@
 	            <span> <img src="./images/assets/calender.png"></span>
 				<span class="date_time">  {{product.dt}} </span>
 				</div>
-			    
+
+
 			    <div class="venue">
 			    <span> <img src="./images/assets/location.png"></span>
-				<span class="venue">  {{product.venue}} </span>
+				<span class="venue_name">  {{product.venue}} </span>
 				</div>
 
 				<div class="price">
 				<span> <img src="./images/assets/price.png"></span>
-				<span class="price">  {{product.price}} </span>
+				<span class="priceVal">  {{product.price}} </span>
 				</div>
 
 			</div>
@@ -51,7 +52,12 @@
             <div class="rightbar_below">
 				<div class="author">
 					<span> <img src="./images/assets/author.png"></span>
-					<span class="author">  {{product.author}} </span>
+					<span class="authorName">  {{product.author}} </span>
+
+					<div class="contact" style="float:right;"> 
+					<span> <img src="./images/assets/email.png"></span>
+					<span class="contactEmail"> Email:  {{product.email}}  </span> 
+					</div>
 			    </div>
 		    </div>
 
