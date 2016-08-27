@@ -94,8 +94,8 @@ app.get("/date",function (req,res){
 
 
 app.post("/createEvent",function (req,res){
-     connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`) "+
-      "Values('"+ req.query.event_title+"','"+ req.query.event_date+"','"+req.query.event_venue+"','"+req.query.event_type+"','"+ req.query.event_author+"','"+req.query.event_price+"','"+ req.query.event_description+"')",function(err,results){
+     connection.query("Insert into events(`title`,`dt`,`venue`,`type`,`author`,`price`,`des`,`author_id`,`email`) "+
+      "Values('"+ req.query.event_title+"','"+ req.query.event_date+"','"+req.query.event_venue+"','"+req.query.event_type+"','"+ req.query.event_author+"','"+req.query.event_price+"','"+ req.query.event_description+"','"+ req.query.event_author_id+"','"+ req.query.event_author_email+"')",function(err,results){
      
         res.send(results);
         console.log(err);

@@ -1,6 +1,6 @@
 <div >
-<form  ng-controller="uploadController" name="upload_form">
-        Single Image with validations
+<form  ng-controller="uploadController" name="upload_form"  class="form-style-5">
+        Select Image
 
     <input 
         type="file" 
@@ -10,17 +10,28 @@
         ngf-pattern="'image/*'"
         accept="image/*" 
         ngf-max-size="20MB" 
-        />
-    Image thumbnail: <img style="width:100px;" ng-show="!!file" ngf-thumbnail="file || '/thumb.jpg'"/>
+        /><br><br>
+
+<div>
+    <span style="">Image thumbnail.</span>
+<!--   <img style="vertical-align:middle" src="https://placehold.it/60x60"> -->
+  <img style="width:100px;vertical-align:middle" ng-show="!!file" ngf-thumbnail="file || './images/assets/constant/thumb.png'"/>
+  
+</div><br><br>
+
+   <!--  Image thumbnail: <img style="width:100px;vertical-align:middle" ng-show="!!file" ngf-thumbnail="file || './images/assets/constant/thumb.png'"/>
     <i ng-show="upload_form.file.$error.required">*required</i><br>
     <i ng-show="upload_form.file.$error.maxSize">File too large 
-    {{file.size / 1000000|number:1}}MB: max 20M</i>
+    {{file.size / 1000000|number:1}}MB: max 20M</i> -->
    <!--  Multiple files
     <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>
     Drop files: <div ngf-drop ng-model="files" class="drop-box">Drop</div> -->
-    <input type="text" name="test" value="test" />    
-    <button type="submit" ng-click="submit()">submit</button>
-    <a href='/#/' > Done uploading images </a>
+    <!-- <button type="submit" ng-click="submit()">submit</button> -->
+<input type="button" value="Submit" ng-click="submit()">
+    
+
+
+    <a href='/#/' class="hvr-back-pulse-href" style="width: 84%;padding: 19px 39px 18px 39px;"> Done uploading images </a>
     <p>{{progress}}</p>
  </form>
  </div>

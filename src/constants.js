@@ -8,7 +8,35 @@ var cover_images = {
 	'entertainment':'./images/assets/constant/entertainment.jpg',
 	'tech':'./images/assets/constant/tect.png',
 	'today': './images/assets/constant/date.jpg',
-	'tomorrow':'./images/assets/constant/date.jpg',
-	'week':'./images/assets/constant/date.jpg',
-	'month':'./images/assets/constant/date.jpg'
+	'tomorrow':'./images/assets/constant/tomorrow.png',
+	'week':'./images/assets/constant/week.jpg',
+	'month':'./images/assets/constant/month.jpg'
+};
+
+var title_message = {
+	'adventure':'ADVENTURE EVENTS IN BANGALORE',
+	'health':'HEALTH EVENTS IN BANGALORE',
+	'party':'PARTIES & NIGHTLIFE IN BANGALORE',
+	'art':'ART & THEATRE EVENTS IN BANGALORE',
+	'sports':'SPORTING EVENTS IN BANGALORE',
+	'entertainment':'ENTERTAINMENT EVENTS IN BANGALORE',
+	'tech':'TECH EVENTS IN BANGALORE',
+	'today': 'EVENTS IN BANGALORE TODAY',
+	'tomorrow':'EVENTS IN BANGALORE TOMORROW',
+	'week':'EVENTS IN BANGALORE THIS WEEK',
+	'month':'EVENTS IN BANGALORE THIS MONTH'
+};
+
+var sub_message = {
+	'adventure':'Adventure, Trekking, Outdoor Events',
+	'health':'Yoga, Meditation, Health & Fitness Events Near You',
+	'party':'Parties, Pub Crawls, Night Clubs',
+	'art':'Exhibitions, Performance & Theatre Events',
+	'sports':'Marathons, Tournaments',
+	'entertainment':'Music, Dance, Live Events',
+	'tech':'Conferences for Startups, Entrepreneurs & Enterprises',
+	'today': 'Events​, Activities ​& ​ Experiences',
+	'tomorrow':'Events​, Activities ​& ​ Experiences',
+	'week':'Events​, Activities ​& ​ Experiences',
+	'month':'Events​, Activities ​& ​ Experiences'
 };

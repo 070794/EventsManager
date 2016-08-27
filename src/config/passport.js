@@ -43,6 +43,8 @@ passport.deserializeUser(function(user, done) {
                 var newUserMysql = new Object();
                 newUserMysql.id =rows[0].user_id;
                 newUserMysql.name =rows[0].name;
+                newUserMysql.email =rows[0].email;
+                console.log(newUserMysql);
                return done(null, newUserMysql); 
                //req.flash('signupMessage', 'That email is already taken.'));
             } else {
@@ -60,6 +62,7 @@ passport.deserializeUser(function(user, done) {
                 newUserMysql.id = rows.insertId;
                 
                 newUserMysql.name =profile.displayName;
+                newUserMysql.email =profile.emails[0].value;
                 console.log(newUserMysql);
                 return done(null, newUserMysql);
 

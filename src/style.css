@@ -270,9 +270,10 @@ background-color:#4CAF50;
 .datetime{
     padding-left: 20px;
     margin-bottom: 25px;
-    font-size: 1.2em;
     display: inline-flex;
     width:100%;
+    font-size: 1.15em;
+    font-family: Verdana;
 }
 
 .datetime img{
@@ -283,6 +284,7 @@ background-color:#4CAF50;
   padding-left: 10px;
   padding-top: 4px;
   text-transform: uppercase;
+
 }
 
 
@@ -290,10 +292,10 @@ background-color:#4CAF50;
 .venue{
     padding-left: 22px;
     margin-bottom: 25px;
-    font-size: 1.2em;
+    font-size: 1.15em;
+    font-family: Verdana;
     display: inline-flex;
     width:100%;
-    /*margin-left: 15px;*/
 }
 
 .venue img{
@@ -313,6 +315,7 @@ background-color:#4CAF50;
     font-size: 1.2em;
     display: inline-flex;
     width:100%;
+    font-family: Verdana;
 }
 
 .price img{
@@ -331,6 +334,7 @@ background-color:#4CAF50;
     font-size: 1.2em;
     display: inline-flex;
     width:100%;
+    font-family: Verdana;
 
 }
 
@@ -676,13 +680,13 @@ font-weight: 400;
 }
 
 .content{
-    top: 50%;
+    top: 35%;
     position: absolute;
     /* z-index: 2; */
     text-align: center;
     /* transform: translate(-50%, -50%); */
     align: center;
-    left: 30%;
+    left: 24%;
 }
 
 .content h2{

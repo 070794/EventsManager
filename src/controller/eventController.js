@@ -3,6 +3,8 @@ var events=[];
     $routeParams, resultsFactory, typeFactory, dateFactory){
       $scope.products=events;
       $scope.backgroundImage="./images/assets/constant/default.jpg";
+      $scope.titleMessage = "Things To Do In Bengaluru & Beyond";
+      $scope.subMessage = "Events​, Activities ​& ​ Experiences";
 
       $scope.go = function (path ,eventid) {
         //console.log(eventid);
@@ -13,6 +15,8 @@ var events=[];
 
          // console.log($routeParams.type_id);
          $scope.backgroundImage=cover_images[$routeParams.type_id];
+         $scope.titleMessage = title_message[$routeParams.type_id];
+         $scope.subMessage = sub_message[$routeParams.type_id];
         // console.log(cover_images);
          // console.log(cover_images[$routeParams.type_id]);
 
@@ -32,6 +36,8 @@ var events=[];
       
       // $scope.backgroundImage=images.date_id;
        $scope.backgroundImage=cover_images[$routeParams.date_id];
+         $scope.titleMessage = title_message[$routeParams.date_id];
+         $scope.subMessage = sub_message[$routeParams.date_id];
         dateFactory.all($routeParams.date_id).then(
           function(res){
             $scope.products = res;

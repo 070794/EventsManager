@@ -12,7 +12,9 @@
       'event_type':  $scope.event_type,
       'event_author': usr_name,
       'event_price':  $scope.event_price,
-      'event_description':  $scope.event_description
+      'event_description':  $scope.event_description,
+      'event_author_id':usr_id,
+      'event_author_email':usr_email
 
     };
 
