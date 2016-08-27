@@ -102,6 +102,22 @@ app.post("/createEvent",function (req,res){
     });
 });
 
+app.post("/updateEvent",function (req,res){
+     connection.query("Update events set `title`='"
+      +req.query.title+"',`venue`='"+req.query.venue+"',`type`='"
+      +req.query.type+"',`author`='"+ req.query.author+"',`price`= '"
+      +req.query.price+"',`des`='"+ req.query.des+"' where `event_id`= '"+ req.query.event_id+"'",function(err,results){
+     
+        res.send(results);
+        console.log(err);
+    //     console.log("Update events set `title`='"
+    //   +req.query.title+"',`venue`='"+req.query.venue+"',`type`='"
+    //   +req.query.type+"',`author`='"+ req.query.author+"',`price`= '"
+    //   +req.query.price+"',`des`='"+ req.query.des+"' where `event_id`= '"+ req.query.event_id+"'");
+    });
+});
+
+
 app.get('/profile',function(req,res){
      connection.query("SELECT * from events where `Author_id`='"+ req.query.user_id+"'",function (err,results){
          res.send(results);

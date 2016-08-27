@@ -30,6 +30,10 @@ explora.config(['$routeProvider',function($routeProvider){
     	templateUrl:'upload.html',
         controller:'uploadController'
     })
+    .when('/update/:event_id',{
+        templateUrl:'update.html',
+        controller:'profileController'
+    })
     .when('/profile',{
         templateUrl:'view.html',
         controller:'profileController'

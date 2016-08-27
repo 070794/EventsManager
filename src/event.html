@@ -47,9 +47,15 @@
 				<span class="priceVal">  {{product.price}} </span>
 				</div>
 
-				<div class="middlebar">
-	              <a href='/#create'> REGISTER </a> 
+				<div ng-if="isAdmin" class="middlebar">
+				<a href='/#update/{{product.event_id}}'> UPDATE </a> 
+				    <!-- code to render a large video block-->
 				</div>
+				<div ng-if="!isAdmin" class="middlebar">
+				<a href='/#create'> REGISTER </a> 
+				    <!-- code to render the regular video block -->
+				</div>
+
 
 			</div>
 

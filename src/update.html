@@ -1,17 +1,17 @@
-<div ng-controller="formController">
+<div ng-controller="updateController">
 <form id= "form" > 
 	<label>Event Name:    </label>
-	    <input type="text"  ng-model="event_title" required /><br>
-	 <label>Event Start Date:   </label>
-	    <input type="date"  ng-model="event_date"  required /><br>
+	    <input type="text"  ng-model=product.title required /><br>
+	<!--  <label>Event Start Date:   </label>
+	    <input type="date"  ng-model=product.dt required /><br>
 	  <label>Event Start Time:  </label>
-	    <input type="time"  ng-model="event_time" value="{{event_time | date: 'HH:mm:ss'}}" required /><br>   
+	    <input type="time"  ng-model="{{event_time | date: 'HH:mm:ss'}}" required /><br>  -->  
 	 <label> Venue:  </<label>
-	 	<input type="text"  ng-model="event_venue"  required /><br>
+	 	<input type="text"  ng-model=product.venue required /><br>
 
 	 <label>Event Type: </label>
     
-	   <select ng-model="event_type">
+	   <select ng-model=product.type>
 		  <option value="art" />Arts & Culture</option>
 		  <option value="entertainment">Entertainment</option>
 		  <option value="sports"/>Sports & Fitness</option>
@@ -24,9 +24,9 @@
 		
 
 	<label>Ticket Price:  </label>
-	 	<input type="number" ng-model="event_price"  required /><br>
+	 	<input type="number" ng-model=product.price required /><br>
 	<label>	Description:  </label>
-		<input type="text" ng-model="event_description"  required  /><br>
+		<input type="text" ng-model=product.des required  /><br>
     <input type="button" value="Submit" ng-click="getData()">
     
 

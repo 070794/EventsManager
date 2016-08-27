@@ -14,7 +14,6 @@ var event=[];     // data of one single event
       };
 
 
-
           $scope.direction = 'left';
           $scope.currentIndex = 0;
 
@@ -56,9 +55,30 @@ var event=[];     // data of one single event
         $scope.product = res[0];
         $scope.product.dt=new Date($scope.product.dt.replace('T', ' ').slice(0,19)).toString().slice(0,24);
         console.log($scope.product);
+        checkAdmin();
         console.log("updated");
       },
       function(err){
         console.error(err);
+
       });
+
+      $scope.isAdmin=false;
+
+      function checkAdmin()
+      {
+        //console.log($scope.product.Author_id);
+        if((typeof usr_id !== undefined )  && $scope.product.Author_id===usr_id)
+        {
+          $scope.isAdmin=true;
+          console.log("true");
+        }
+        else
+        {
+          $scope.isAdmin=false;
+          console.log("else");
+        }
+      }
+
+
   });

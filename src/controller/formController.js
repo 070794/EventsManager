@@ -18,10 +18,6 @@
 
     $scope.getid;
     
-     // console.log(usr_name);
-     // console.log( $scope.data);
-     // console.log($scope.event_time.toISOString().slice(12, 19));
-    
      createFactory.all( $scope.data).then(
           function(res){
              $scope.getid = res.insertId;
