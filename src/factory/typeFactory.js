@@ -13,7 +13,7 @@
 
               method: 'GET',
 
-              url: 'http://localhost:3000/type'
+              url: '/type'
           }).then(function successCallback(response) {
               // this callback will be called asynchronously
               // when the response is available

@@ -10,7 +10,7 @@
           params: data,
           headers:{'Accept':'application/json'}, 
           method: 'GET',
-          url: 'http://localhost:3000/event_data'
+          url: '/event_data'
        }).then(function successCallback(response) {
            // this callback will be called asynchronously
            // when the response is available

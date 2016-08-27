@@ -110,11 +110,7 @@ app.post("/updateEvent",function (req,res){
      
         res.send(results);
         console.log(err);
-    //     console.log("Update events set `title`='"
-    //   +req.query.title+"',`venue`='"+req.query.venue+"',`type`='"
-    //   +req.query.type+"',`author`='"+ req.query.author+"',`price`= '"
-    //   +req.query.price+"',`des`='"+ req.query.des+"' where `event_id`= '"+ req.query.event_id+"'");
-    });
+     });
 });
 
 

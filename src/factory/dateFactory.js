@@ -53,7 +53,7 @@
 
 					method: 'GET',
 					
-					url: 'http://localhost:3000/date'
+					url: '/date'
 				}).then(function successCallback(response) {
 					// this callback will be called asynchronously
 					// when the response is available

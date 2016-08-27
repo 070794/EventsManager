@@ -9,7 +9,7 @@ explora.factory('updateFactory', function($http, $q) {
             params: data,
            headers:{'Accept':'application/json'}, 
            method: 'POST',
-           url: 'http://localhost:3000/updateEvent'
+           url: '/updateEvent'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available

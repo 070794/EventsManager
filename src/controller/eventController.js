@@ -13,18 +13,15 @@ var events=[];
 
       if($routeParams.type_id && !$routeParams.date_id){
 
-         // console.log($routeParams.type_id);
          $scope.backgroundImage=cover_images[$routeParams.type_id];
          $scope.titleMessage = title_message[$routeParams.type_id];
          $scope.subMessage = sub_message[$routeParams.type_id];
-        // console.log(cover_images);
-         // console.log(cover_images[$routeParams.type_id]);
+      
 
          typeFactory.all($routeParams.type_id).then(
           function(res){
             $scope.products = res;
-            // new Date('2018-08-08').toString().slice(0,15)
-            //console.log($scope.products);
+           
             console.log("updated");
           },
           function(err){
@@ -32,16 +29,14 @@ var events=[];
           });
        }
        else if($routeParams.date_id && !$routeParams.type_id){
-        //console.log($routeParams.date_id);
-      
-      // $scope.backgroundImage=images.date_id;
+        
        $scope.backgroundImage=cover_images[$routeParams.date_id];
          $scope.titleMessage = title_message[$routeParams.date_id];
          $scope.subMessage = sub_message[$routeParams.date_id];
         dateFactory.all($routeParams.date_id).then(
           function(res){
             $scope.products = res;
-           // console.log($scope.products);
+
             console.log("updated");
           },
           function(err){

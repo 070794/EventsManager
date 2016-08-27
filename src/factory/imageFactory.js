@@ -10,7 +10,7 @@
           params: data,
           headers:{'Accept':'application/json'}, 
           method: 'GET',
-          url: 'http://localhost:3000/images'
+          url: '/images'
        }).then(function successCallback(response) {
            // this callback will be called asynchronously
            // when the response is available

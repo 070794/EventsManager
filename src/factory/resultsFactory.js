@@ -6,7 +6,7 @@
         var d = $q.defer();
           $http({
         method: 'GET',
-        url: 'http://localhost:3000/events'
+        url: '/events'
         }).then(function successCallback(response) {
               // this callback will be called asynchronously
               // when the response is available
