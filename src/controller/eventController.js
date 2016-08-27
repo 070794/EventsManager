@@ -2,6 +2,7 @@ var events=[];
   explora.controller("EventController",function($scope, $location, $http,
     $routeParams, resultsFactory, typeFactory, dateFactory){
       $scope.products=events;
+      $scope.backgroundImage="./images/assets/constant/default.jpg";
 
       $scope.go = function (path ,eventid) {
         //console.log(eventid);
@@ -9,7 +10,11 @@ var events=[];
       };
 
       if($routeParams.type_id && !$routeParams.date_id){
-        //console.log($routeParams.type_id);
+
+         // console.log($routeParams.type_id);
+         $scope.backgroundImage=cover_images[$routeParams.type_id];
+        // console.log(cover_images);
+         // console.log(cover_images[$routeParams.type_id]);
 
          typeFactory.all($routeParams.type_id).then(
           function(res){
@@ -24,8 +29,10 @@ var events=[];
        }
        else if($routeParams.date_id && !$routeParams.type_id){
         //console.log($routeParams.date_id);
-
-         dateFactory.all($routeParams.date_id).then(
+      
+      // $scope.backgroundImage=images.date_id;
+       $scope.backgroundImage=cover_images[$routeParams.date_id];
+        dateFactory.all($routeParams.date_id).then(
           function(res){
             $scope.products = res;
            // console.log($scope.products);
@@ -54,4 +61,9 @@ var events=[];
       $scope.dateclick= function(path,$event){
         $location.path( path + "/"+$event.target.id);
        };
+
+      $scope.allClick= function(path){
+        console.log("Hii");
+        $location.path(path+"/");
+      };
   }); 

@@ -53,6 +53,7 @@
 		<div class="eventtype">
 
           <ul id="typeList">
+            <li ng-click="allClick('/all')" id="all" >All Events </li>
 			<li ng-click="typeclick('type',$event)" id="art" >Arts & Culture </li>
 			<li ng-click="typeclick('type',$event)" id="entertainment" >Entertainment</li>
 			<li ng-click="typeclick('type',$event)" id="sports" >Sports & Fitness</li>
@@ -78,12 +79,7 @@
 	
 
 
- <div class="totalview" ng-view  ></div>
-
-
-    
-   
- <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>  -->
+<div class="totalview" ng-view  ></div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
@@ -94,6 +90,7 @@
 
 
 <script  type="text/javascript" src="app.js"> </script>
+<script  type="text/javascript" src="constants.js"> </script>
 
 <script  type="text/javascript" src="factory/createFactory.js"> </script>
 <script  type="text/javascript" src="factory/dateFactory.js"> </script>
@@ -110,6 +107,7 @@
 <script  type="text/javascript" src="controller/profileController.js"> </script>
 
 <script  type="text/javascript" src="animate.js"> </script>
+
 
 
 </body>

@@ -1,3 +1,10 @@
+
+CREATE USER 'eventuser'@'localhost' IDENTIFIED BY 'password';
+create database eventDB;
+GRANT ALL PRIVILEGES ON * . * TO 'eventuser'@'localhost' ;
+FLUSH PRIVILEGES;
+
+
 CREATE TABLE events(
       event_id INT NOT NULL AUTO_INCREMENT,
       title VARCHAR(100) NOT NULL,

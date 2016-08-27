@@ -655,7 +655,7 @@ font-weight: 400;
 
 
 .banner{
-    background-image: url('https://cdn.explara.com/explara_home_outdoor_2-min-2_20160725094404.jpg');
+    /*background-image: url('https://cdn.explara.com/explara_home_outdoor_2-min-2_20160725094404.jpg');*/
     height: 400px;
     width: 100%;
     background-repeat: no-repeat;

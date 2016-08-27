@@ -1,5 +1,5 @@
 
-<div class="banner" >
+<div class="banner" ng-style="{'background-image': 'url({{backgroundImage}})'}">
 				<div class="overlay "></div>
 				<div class="content">
 					<h2 style="margin-bottom:5px;">Things To Do In Bengaluru &amp; Beyond</h2> 
@@ -10,7 +10,7 @@
 				</div>
 	</div><br> <hr>
 
-<div class="total"  ng-controller="EventController" 
+<div class="total"  
       ng-repeat="event in products" id={{event.event_id}} 
        ng-click="go('events',event.event_id)">
 
