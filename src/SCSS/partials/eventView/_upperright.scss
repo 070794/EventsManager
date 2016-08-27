@@ -1,0 +1,110 @@
+
+
+.datetime{
+    padding-left: 20px;
+    margin-bottom: 25px;
+    display: inline-flex;
+    width:100%;
+    font-size: 1.15em;
+    font-family: Verdana;
+}
+
+
+
+.rightbar{
+    width:25%;
+    margin-right:10px;
+    background-color:white;
+    text-shadow: none;
+    padding: 10px;
+    border: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(39,49,65,0.5);
+    float: left;
+    margin-left:20px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}  
+
+.middlebar{
+
+        width: 94%;
+    /*margin-left: 40px;*/
+    text-shadow: none;
+    padding: 10px;
+    border: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(39,49,65,0.5);
+    float: left;
+    background-color: #a91f23;
+    align: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder; 
+    
+}
+
+.middlebar a{
+  color: #fff;
+    text-decoration: blink;
+}
+
+.middlebar:hover:not(.active) {
+    background-color: red ;
+    /*border-bottom: 3px solid #db4344 ;
+    color:#2b7bfe;*/
+}
+
+.active {
+background-color:#4CAF50;
+}
+
+.datetime img{
+      height: 5%;
+}
+
+.date_time{
+  padding-left: 10px;
+  padding-top: 4px;
+  text-transform: uppercase;
+
+}
+
+
+
+.venue{
+    padding-left: 22px;
+    margin-bottom: 25px;
+    font-size: 1.15em;
+    font-family: Verdana;
+    display: inline-flex;
+    width:100%;
+}
+
+.venue img{
+      height: 5%;
+}
+
+.venue_name{
+    padding-left: 10px;
+   padding-top: 4px;
+   text-transform: uppercase;
+}
+
+
+.price{
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    display: inline-flex;
+    width:100%;
+    font-family: Verdana;
+}
+
+.price img{
+      height: 5%;
+}
+
+.priceVal{
+   padding-left: 10px;
+   padding-top: 4px;
+}

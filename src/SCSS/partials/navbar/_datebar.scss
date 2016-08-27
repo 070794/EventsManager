@@ -1,0 +1,24 @@
+#datelist{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 30%;
+    padding-right:30%;
+    background-color:white;
+    width:100%;
+    /*align:center;*/
+}
+
+.date{
+    color: #444;
+    border: 2px solid #CCC;
+    /*background: #DDD;*/
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    cursor: pointer;
+    /* max-width: 100px; */
+    padding: 5px;
+    align: center;
+    min-height:30px;
+
+    overflow: hidden;
+
+}

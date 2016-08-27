@@ -1,6 +1,32 @@
 
+
 @import "partials/buttons/_createButton.scss";
 @import "partials/buttons/_googleButton.scss";
+@import "partials/buttons/_profile.scss";
+
 @import "partials/images/_logo.scss";
 @import "partials/images/_image.scss";
 
+@import "partials/Box/_belowbox.scss";
+@import "partials/Box/_eventbox.scss";
+@import "partials/Box/_totalbox.scss";
+
+@import "partials/eventView/_detail.scss";
+@import "partials/eventView/_leftbar.scss";
+@import "partials/eventView/_lowerright.scss";
+@import "partials/eventView/_slideshow.scss";
+@import "partials/eventView/_upperright.scss";
+
+@import "partials/filterpage/_banner.scss";
+
+@import "partials/forms/_forms.scss";
+
+@import "partials/home/_description.scss";
+@import "partials/home/_video.scss";
+
+@import "partials/navbar/_datebar.scss";
+@import "partials/navbar/_typebar.scss";
+
+@import "partials/topbar/_topbar.scss";
+
+@import "partials/_body.scss";

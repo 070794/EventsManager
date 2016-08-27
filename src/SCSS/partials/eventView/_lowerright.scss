@@ -1,0 +1,52 @@
+.rightbar_below{
+  padding-top: 4%;
+    
+    width:25%;
+    margin:20px 10px 10px 10px;
+    background-color:white;
+    text-shadow: none;
+    padding: 10px;
+    border: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(39,49,65,0.5);
+    float: left;
+    margin-left:20px;
+}
+
+
+.author{
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    display: inline-flex;
+    width:100%;
+    font-family: Verdana;
+
+}
+
+.author img{
+      height: 5%;
+}
+
+.author_name{
+  padding-left: 10px;
+  padding-top: 4px;
+  text-transform: uppercase;
+}
+
+.contact{
+    padding-left: 20px;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    display: inline-flex;
+    width:100%;
+    
+}
+
+.contact img{
+      height: 5%;
+}
+
+.contactEmail{
+  padding-left: 10px;
+  padding-top: 4px;
+}
