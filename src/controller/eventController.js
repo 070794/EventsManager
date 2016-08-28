@@ -1,7 +1,8 @@
-var events=[];
-  explora.controller("EventController",function($scope, $location, $http,
+
+  explora.controller("EventController",['$scope', '$location', '$http',
+    '$routeParams', 'resultsFactory', 'typeFactory', 'dateFactory',function($scope, $location, $http,
     $routeParams, resultsFactory, typeFactory, dateFactory){
-      $scope.products=events;
+      $scope.products=[];
       $scope.backgroundImage="./images/assets/constant/default.jpg";
       $scope.titleMessage = "Things To Do In Bengaluru & Beyond";
       $scope.subMessage = "Events​, Activities ​& ​ Experiences";
@@ -67,4 +68,4 @@ var events=[];
         console.log("Hii");
         $location.path(path+"/");
       };
-  }); 
+  }]); 

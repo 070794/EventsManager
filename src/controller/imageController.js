@@ -1,7 +1,7 @@
  
 var images=[];    // array of all inages
 var event=[];     // data of one single event
- explora.controller("ImageController",function($scope,$routeParams,imageFactory,eventFactory){
+ explora.controller("ImageController",['$scope','$routeParams','imageFactory','eventFactory', function($scope,$routeParams,imageFactory,eventFactory){
 
       $scope.slides=images;
       $scope.product=event;
@@ -81,4 +81,4 @@ var event=[];     // data of one single event
       }
 
 
-  });
+  }]);

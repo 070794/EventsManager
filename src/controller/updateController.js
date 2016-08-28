@@ -1,4 +1,4 @@
-explora.controller("updateController",function($scope,$routeParams, $location,eventFactory,updateFactory){
+explora.controller("updateController",['$scope','$routeParams', '$location','eventFactory','updateFactory',function($scope,$routeParams, $location,eventFactory,updateFactory){
    
    $scope.product=[];
     eventFactory.all($routeParams.event_id).then(
@@ -50,4 +50,4 @@ explora.controller("updateController",function($scope,$routeParams, $location,ev
 
 
   
-  });
+  }]);

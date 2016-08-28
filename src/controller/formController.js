@@ -1,6 +1,6 @@
 
 
-  explora.controller("formController",function($scope, $location,createFactory){
+  explora.controller("formController",['$scope', '$location','createFactory',function($scope, $location,createFactory){
    
     $scope.event_type="art";
      $scope.getData=function(){
@@ -36,4 +36,4 @@
     
    };
 
-  });
+  }]);
