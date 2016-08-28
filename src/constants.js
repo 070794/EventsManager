@@ -1,5 +1,4 @@
-
-var cover_images = {
+explora.constant('cover_images', {
 	'adventure':'./images/assets/constant/adventure.png',
 	'health':'./images/assets/constant/health.jpg',
 	'party':'./images/assets/constant/party.jpeg',
@@ -11,9 +10,9 @@ var cover_images = {
 	'tomorrow':'./images/assets/constant/tomorrow.png',
 	'week':'./images/assets/constant/week.jpg',
 	'month':'./images/assets/constant/month.jpg'
-};
+});
 
-var title_message = {
+explora.constant('title_message', {
 	'adventure':'ADVENTURE EVENTS IN BANGALORE',
 	'health':'HEALTH EVENTS IN BANGALORE',
 	'party':'PARTIES & NIGHTLIFE IN BANGALORE',
@@ -25,9 +24,11 @@ var title_message = {
 	'tomorrow':'EVENTS IN BANGALORE TOMORROW',
 	'week':'EVENTS IN BANGALORE THIS WEEK',
 	'month':'EVENTS IN BANGALORE THIS MONTH'
-};
+});
 
-var sub_message = {
+
+explora.constant('sub_message', {
+ 
 	'adventure':'Adventure, Trekking, Outdoor Events',
 	'health':'Yoga, Meditation, Health & Fitness Events Near You',
 	'party':'Parties, Pub Crawls, Night Clubs',
@@ -39,4 +40,4 @@ var sub_message = {
 	'tomorrow':'Events​, Activities ​& ​ Experiences',
 	'week':'Events​, Activities ​& ​ Experiences',
 	'month':'Events​, Activities ​& ​ Experiences'
-};
+});
