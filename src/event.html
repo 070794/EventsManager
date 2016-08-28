@@ -2,65 +2,60 @@
 
     <div class="upperpart">
 
-			<div class="leftbar">
+		<div class="leftbar">
 
-				<div  class="eventname">
-				<span> <img src="./images/assets/event.png"></span>
-				<span class="event">  {{product.title}} </span>
-				</div>
-
-				<div class="container slider" >
-							<img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-							ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-							ng-hide="!isCurrentSlideIndex($index)" ng-src="images/{{slide.image_path}}" >
-
-						<a class="arrow prev" ng-click="nextSlide()"></a>
-						<a class="arrow next" ng-click="prevSlide()"></a>
-							<nav class="nav">
-								<div class="wrapper">
-									<ul class="dots">
-										<li class="dot" ng-repeat="slide in slides">
-											<a ng-class="{'active':isCurrentSlideIndex($index)}"
-										ng-click="setCurrentSlideIndex($index);"></a></li>
-									</ul>
-								</div>
-							</nav>
-				</div>
-
+			<div  class="eventname">
+			<span> <img src="./images/assets/event.png"></span>
+			<span class="event">  {{product.title}} </span>
 			</div>
 
-			<div class="rightbar">
+			<div class="container slider" >
+						<img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+						ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+						ng-hide="!isCurrentSlideIndex($index)" ng-src="images/{{slide.image_path}}" >
 
-				<div class="datetime">
+					<a class="arrow prev" ng-click="nextSlide()"></a>
+					<a class="arrow next" ng-click="prevSlide()"></a>
+						<nav class="nav">
+							<div class="wrapper">
+								<ul class="dots">
+									<li class="dot" ng-repeat="slide in slides">
+										<a ng-class="{'active':isCurrentSlideIndex($index)}"
+									ng-click="setCurrentSlideIndex($index);"></a></li>
+								</ul>
+							</div>
+						</nav>
+			</div>
+
+		</div>
+
+		<div class="rightbar">
+
+			<div class="datetime">
 	            <span> <img src="./images/assets/calender.png"></span>
 				<span class="date_time">  {{product.dt}} </span>
-				</div>
-
-
-			    <div class="venue">
-			    <span> <img src="./images/assets/location.png"></span>
-				<span class="venue_name">  {{product.venue}} </span>
-				</div>
-
-				<div class="price">
-				<span> <img src="./images/assets/price.png"></span>
-				<span class="priceVal"> ₹ {{product.price}} </span>
-				</div>
-
-				<div ng-if="isAdmin" class="middlebar">
-				<a href='/#update/{{product.event_id}}'> UPDATE </a> 
-				    <!-- code to render a large video block-->
-				</div>
-				<div ng-if="!isAdmin" class="middlebar">
-				<a href='/#create'> REGISTER </a> 
-				    <!-- code to render the regular video block -->
-				</div>
-
-
 			</div>
 
-			
-            
+		    <div class="venue">
+			    <span> <img src="./images/assets/location.png"></span>
+				<span class="venue_name">  {{product.venue}} </span>
+			</div>
+
+			<div class="price">
+				<span> <img src="./images/assets/price.png"></span>
+				<span class="priceVal"> ₹ {{product.price}} </span>
+			</div>
+
+			<div ng-if="isAdmin" class="middlebar">
+				<a href='/#update/{{product.event_id}}'> UPDATE </a> 
+			</div>
+
+			<div ng-if="!isAdmin" class="middlebar">
+				<a href='/#create'> REGISTER </a> 
+			</div>
+
+		</div>
+
             <div class="rightbar_below">
 
 				    <div class="author">
@@ -79,8 +74,8 @@
 	</div>
 
 		<div class="description"> 
-		<span class="heading" > DESCRIPTION</span>
-		<p>{{product.des}}</p>
+			<span class="heading" > DESCRIPTION</span>
+			<p>{{product.des}}</p>
 		</div>
 
 </div>

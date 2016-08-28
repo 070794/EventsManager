@@ -117,7 +117,6 @@ app.post("/updateEvent",function (req,res){
 app.get('/profile',function(req,res){
      connection.query("SELECT * from events where `Author_id`='"+ req.query.user_id+"'",function (err,results){
          res.send(results);
-      console.log("SELECT * from events where `Author_id`='"+ req.query.user_id+"'");
     });
 });
 
@@ -146,21 +145,17 @@ var storage = multer.diskStorage({ //multers disk storage settings
                  return;
             }
              res.json({error_code:0,err_desc:null});
-             console.log(req.body.event_id);
-             console.log(store);
 
     connection.query("Insert into images(`event_id`,`image_path`)Values('"+ 
       req.body.event_id+"','"+store+"')",function(err,results){
-     
-        console.log(results);
+
         console.log(err);
     });
 
 
     connection.query("Update events SET `thumb` ='"+store+"' where `event_id` ='"+ 
       req.body.event_id+"'",function(err,results){
-     
-   console.log(results);
+
         console.log(err);
     });
         });

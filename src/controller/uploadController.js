@@ -1,10 +1,10 @@
  
 explora.controller('uploadController',['$scope','Upload','$window','$routeParams',function($scope,Upload,$window,$routeParams){
-    //var $scope = this;
+    
     $scope.submit = function(){ //function to call on form submit
-        console.log("hii");
+
         if ($scope.upload_form.file.$valid && $scope.file) { 
-            console.log("hii");//check if from is valid
+           
             $scope.upload($scope.file); //call upload function
         }
     }

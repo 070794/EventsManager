@@ -14,12 +14,10 @@
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
-            console.log("success");
             d.resolve(response.data);
-            console.log(response.data);
+    
             
           }, function errorCallback(response) {
-            console.log("failure");
             console.log(response);
             // called asynchronously if an error occurs
             // or server returns response with an error status.

@@ -23,11 +23,8 @@
      createFactory.all( $scope.data).then(
           function(res){
              $scope.getid = res.insertId;
-            // console.log($scope.getid);
-            // console.log("/#upload" + "/"+$scope.getid);
+            
             $location.path( "upload" + "/"+$scope.getid);
-
-            console.log("updated");
           },
           function(err){
             console.error(err);

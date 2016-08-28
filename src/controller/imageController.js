@@ -5,8 +5,6 @@ var event=[];     // data of one single event
 
       $scope.slides=images;
       $scope.product=event;
-      // console.log($routeParams);
-
       $scope.current = 0;
 
       $scope.setCurrent = function(index){
@@ -38,12 +36,10 @@ var event=[];     // data of one single event
 
       imageFactory.all($routeParams.event_id).then(
       function(res){
-          console.log("Here");
-          console.log($routeParams);
+        
         $scope.slides = res;
         console.log(res);
-        console.log($scope.slides);
-        console.log("updated");
+       
       },
       function(err){
         console.error(err);
@@ -54,9 +50,9 @@ var event=[];     // data of one single event
       function(res){
         $scope.product = res[0];
         $scope.product.dt=new Date($scope.product.dt.replace('T', ' ').slice(0,19)).toString().slice(0,24);
-        console.log($scope.product);
+      
         checkAdmin();
-        console.log("updated");
+        
       },
       function(err){
         console.error(err);
@@ -67,16 +63,13 @@ var event=[];     // data of one single event
 
       function checkAdmin()
       {
-        //console.log($scope.product.Author_id);
         if((typeof usr_id !== undefined )  && $scope.product.Author_id===usr_id)
         {
           $scope.isAdmin=true;
-          console.log("true");
         }
         else
         {
           $scope.isAdmin=false;
-          console.log("else");
         }
       }
 

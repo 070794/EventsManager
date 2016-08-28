@@ -33,8 +33,7 @@
          typeFactory.all($routeParams.type_id).then(
           function(res){
             $scope.products = res;
-           
-            console.log("updated");
+          
           },
           function(err){
             console.error(err);
@@ -48,7 +47,6 @@
           function(res){
             $scope.products = res;
 
-            console.log("updated");
           },
           function(err){
             console.error(err);
@@ -59,7 +57,6 @@
         resultsFactory.all().then(
         function(res){
           $scope.products = res;
-          console.log("updated");
         },
         function(err){
           console.error(err);
