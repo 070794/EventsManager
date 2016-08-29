@@ -1,0 +1,22 @@
+
+
+.hvr-back-pulse-href:link, .hvr-back-pulse-href:visited {
+    display: table;
+    background-color: #4285f4;
+    color: white;
+    padding: 3.5px 12px;
+    text-align: center;
+    text-decoration: none;
+    height: 10px;
+    margin-top: 2.60px;
+    border: 3px solid #4285f4;
+    font-weight: bolder;
+    font-variant: inherit;
+    margin-right: 5px;
+}
+
+.hvr-back-pulse-href:hover, .hvr-back-pulse-href:active {
+    background-color: red;
+    border: 3px solid red;
+}
+

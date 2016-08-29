@@ -1,0 +1,37 @@
+<div ng-controller="updateController">
+<form id= "form"  class="form-style-5"> 
+	<label>Event Name:    </label>
+	    <input type="text"  ng-model=product.title required /><br>
+	<!--  <label>Event Start Date:   </label>
+	    <input type="date"  ng-model=product.dt required /><br>
+	  <label>Event Start Time:  </label>
+	    <input type="time"  ng-model="{{event_time | date: 'HH:mm:ss'}}" required /><br>  -->  
+	 <label> Venue:  </label>
+	 	<input type="text"  ng-model=product.venue required /><br>
+
+	 <label>Event Type: </label>
+    
+	   <select ng-model=product.type>
+		  <option value="art" />Arts & Culture</option>
+		  <option value="entertainment">Entertainment</option>
+		  <option value="sports"/>Sports & Fitness</option>
+		  <option value="adventure"/>Adventure</option>
+		  <option value="tech"/>Biz & Tech</option>
+		  <option value="party"/>Parties & NightLife</option>
+		  <option value="health"/>Health</option>
+		</select><br>
+
+		
+
+	<label>Ticket Price:  </label>
+	 	<input type="number" ng-model=product.price required /><br>
+	<label>	Description:  </label>
+	 <textarea ng-model=product.des required ></textarea><br>
+    <input type="button" value="Submit" ng-click="getData()"> 
+    
+
+
+
+</form>
+
+</div>

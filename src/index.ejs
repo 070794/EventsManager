@@ -1,0 +1,122 @@
+<html ng-app="EventsManager">
+<head> 
+<title>Events Manager</title>
+<base href="/">
+
+<link type="text/css" rel=stylesheet href=CSSfile/CSSfile/main.min.css /> 
+
+</head>
+
+<body ng-controller="EventController">
+
+    <!-- the upper div which contain title,city and login buttons -->
+	<div class="topbar">
+
+			<div class="logo"><a href='/#/' ><img  src="./images/logo/logo2.png" ></a></div>
+
+			<div class="addons">
+
+				<% if(typeof user== 'undefined') { %>
+					<a href="/auth/google" class="btn btn-danger googlebtn"><span class="fa fa-google-plus"></span> <img  src="loginImage.png"></a>
+					<a href='/auth/google' class="hvr-back-pulse-href" type="button"> + Create</a> 
+				<% }else { %>
+				    <script>  var usr_id = <%= user.id %>;
+				    var usr_name ="<%= user.name %>";
+				    var usr_email="<%= user.email %>";
+					</script>
+					<!-- user profile -->
+                    <div class="image" ><span> <img src="./images/assets/author.png"></span></div>
+					<div class="dropdown">
+						  <button class="dropbtn">Hi <%= user.name %></button>
+						  <div class="dropdown-content">
+						    <a href="/#profile">My Events</a>
+						    <a href="/logout">Logout</a>
+						  </div>
+					</div>
+
+					<!-- <a href='/logout' class="hvr-back-pulse-href" type="button"> LOG OUT</a> -->
+					<a href='/#create' class="hvr-back-pulse-href" type="button"> + Create</a> 
+				 <% } %>
+					
+			</div>
+
+	
+
+	</div>
+
+
+
+	
+
+	 <!-- in this div the types of events filer is added -->
+	<div class="filter">
+
+		<div class="eventtype">
+
+          <ul id="typeList">
+            <li ng-click="allClick('/all')" id="all" >All Events </li>
+			<li ng-click="typeclick('type',$event)" id="art" >Arts & Culture </li>
+			<li ng-click="typeclick('type',$event)" id="entertainment" >Entertainment</li>
+			<li ng-click="typeclick('type',$event)" id="sports" >Sports & Fitness</li>
+			<li ng-click="typeclick('type',$event)" id="adventure" >Adventure</li>
+			<li ng-click="typeclick('type',$event)" id="tech" >Biz & Tech</li>
+			<li ng-click="typeclick('type',$event)" id="party" >Parties & NightLife</li> 
+			<li ng-click="typeclick('type',$event)" id="health" >Health</li> 
+		  </ul>
+		  	 
+	</div>
+
+		<div class="date">
+		     <ul id="datelist">
+				<li ng-click="dateclick('datetime',$event)" id="today" type="button">Today</li>
+				<li ng-click="dateclick('datetime',$event)" id="tomorrow" type="button">Tommorow</li>
+				<li ng-click="dateclick('datetime',$event)" id="week" type="button">This Week</li>
+				<li ng-click="dateclick('datetime',$event)" id="month" type="button">This Month</li>
+			</ul>
+		</div>
+
+	</div>
+
+	
+
+
+<div class="totalview" ng-view  ></div>
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+ <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.js"></script>
+
+
+
+<script  type="text/javascript" src="app.js"> </script>
+<script  type="text/javascript" src="constants.js"> </script>
+<script  type="text/javascript" src="animate.js"> </script>
+
+
+<script  type="text/javascript" src="factory/createFactory.js"> </script>
+<script  type="text/javascript" src="factory/dateFactory.js"> </script>
+<script  type="text/javascript" src="factory/eventFactory.js"> </script>
+<script  type="text/javascript" src="factory/imageFactory.js"> </script>
+<script  type="text/javascript" src="factory/resultsFactory.js"> </script>
+<script  type="text/javascript" src="factory/typeFactory.js"> </script>
+<script  type="text/javascript" src="factory/profileFactory.js"> </script>
+<script  type="text/javascript" src="factory/updateFactory.js"> </script>
+
+
+<script  type="text/javascript" src="controller/updateController.js"> </script>
+<script  type="text/javascript" src="controller/eventController.js"> </script>
+<script  type="text/javascript" src="controller/imageController.js"> </script>
+<script  type="text/javascript" src="controller/formController.js"> </script>
+<script  type="text/javascript" src="controller/updateController.js"> </script>
+<script  type="text/javascript" src="controller/uploadController.js"> </script>
+<script  type="text/javascript" src="controller/profileController.js"> </script>
+
+
+
+
+</body>
+</html>

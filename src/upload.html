@@ -1,0 +1,29 @@
+<div >
+<form  ng-controller="uploadController" name="upload_form"  class="form-style-5">
+        Select Image
+
+    <input 
+        type="file" 
+        ngf-select 
+        ng-model="file" 
+        name="file" 
+        ngf-pattern="'image/*'"
+        accept="image/*" 
+        ngf-max-size="20MB" 
+        /><br><br>
+
+<div>
+    <span style="">Image thumbnail.</span>
+<!--   <img style="vertical-align:middle" src="https://placehold.it/60x60"> -->
+  <img style="width:100px;vertical-align:middle" ng-show="!!file" ngf-thumbnail="file || './images/assets/constant/thumb.png'"/>
+  
+</div><br><br>
+
+<input type="button" value="Submit" ng-click="submit()">
+    
+
+
+    <a href='/#/' class="hvr-back-pulse-href" style="width: 84%;padding: 19px 39px 18px 39px;"> Done uploading images </a>
+    <p>{{progress}}</p>
+ </form>
+ </div>

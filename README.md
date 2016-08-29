@@ -1,3 +1,4 @@
+
 # EventsManager
 Its a web application that helps user to get the information about the upcoming events.
 
@@ -13,10 +14,15 @@ You need git to clone this repository. You can get git from
 We also use a number of node.js tools to initialize. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
+###Tech
+```
+Express v4.14.0 (Stable) - fast node.js network app framework
+AngularJS v1 - HTML enhanced for User Interfaces
+Node.js v6.3.1 (Latest) - evented I/O for the backend
+```
 ### Clone gitdash
 
 Clone the gitdash repository using [git]:
-
 ```
 git clone https: https://github.com/070794/EventsManager/
 cd EventsManager
@@ -34,7 +40,6 @@ us manage and test the application.
 npm install 
 bower install
 ```
-
 If you clone this repo you would already have these present.
 
 ### Run the Application
@@ -43,23 +48,32 @@ We have preconfigured the project with a simple development web server.  The sim
 this server is:
 
 ```
-node app.js
+node Server.js
 ```
-
 Now browse to the app at `http://localhost:3000/`.
-
 
 
 ## Directory Layout
 
 ```
+├── README.md
+├── src
+│   ├── app 
+│   ├── config 
+│   ├── controller
+│   ├── CSSfile
+│   ├── factory
+│   ├── images
+├   ├── SCSS files
+│   ├── view files (view ,event,index,register,home,create,upload,update).html
+│     
+│   
+├── Serverfiles
+├── node_modules
+├── node_modules
+├── package.json
+├── gulpfile.js
+│   
+└── Server.js
 
 ```
-
-## Testing
-
-There are two kinds of tests in the angular-seed application: Unit tests and end-to-end tests.
-
-### Running Unit Tests
-
-

@@ -1,0 +1,24 @@
+.topbar{
+    height: 50px;
+    width: 100%;
+}
+
+.logo img{
+  float:left;
+  height: 50px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.image img{
+  height: 40px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom:2px;
+}
+
+.addons{
+    border: none;
+    float:right;
+    display: inline-flex;   
+}
